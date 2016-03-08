@@ -12,7 +12,6 @@ html {
     height: 100%;
     overflow-y: scroll;
     width: 100%;
-    background: url("frontendroot?fileName=default/images/gradient_bg.png") repeat-x scroll 0 0 #009FE3;
 }
 body {
   background-color: #ECEFF4;
@@ -1015,7 +1014,7 @@ color: red;
   height: 5em;
   position: absolute;
   top: 0;
-  background-color: rgba( 0,0,0, 0.5 );
+  background-color: rgba( 0,0,0, 0.75 );
 }
 .header-title h1{
   font-size: 1.6em;
@@ -1030,6 +1029,11 @@ color: red;
   text-align: center;
   font-size: 1.6em;
   padding-top: 1em;
+}
+.footer{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
 }
 .copyrights{
   width: 100%;
