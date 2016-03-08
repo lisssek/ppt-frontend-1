@@ -1,0 +1,442 @@
+<style type="text/css">
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0 none;
+  font-family: "Trebuchet MS",Verdana,sans-serif;
+  line-height: 1.4em;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+html {
+    height: 100%;
+    overflow-y: scroll;
+    width: 100%;
+    background: url("/PoolParty/images/gradient_bg.png") repeat-x scroll 0 0 #009FE3;
+}
+
+body {
+    background: url("/PoolParty/images/water-texture2.png") repeat scroll 0 0 transparent;
+    font-size: 0.813em;
+    color:#333;
+    padding-bottom: 60px;
+}
+
+.logo { 
+    background: url("/PoolParty/images/pp_logo.jpg") no-repeat scroll center center transparent;
+    width: 140px;
+    height: 51px;
+    padding: 20px 0;
+}
+
+.container {
+  background: none repeat scroll 0 0 #FFFFFF;
+  box-shadow: 0 2px 4px #333333;
+  margin: 0 auto 0px;
+  padding: 0 30px 20px;
+  position: relative;
+  text-align: left;
+  width: 960px;
+}
+
+h1 {
+  font-size: 1.538em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  color: #0084B6;
+}
+
+h1 .black {
+    color:#333;
+}
+
+h2 {
+  font-size: 1.231em;
+  font-weight: bold;
+  margin: 0 0 5px;
+  color: #0084B6;
+  padding-bottom: 3px;
+}
+
+h3 {
+  font-size: 0.936em;
+  font-weight: bold;
+  margin: 0 0 10px;
+  color: #0084B6;
+  border-bottom: 1px dotted #0084B6;
+  padding-bottom: 3px;
+}
+
+.strong { font-weight:bold; }
+
+table { width:100%; font-size:small; margin-bottom:15px; border-collapse:collapse; }
+
+tr,td { margin:0; padding:0; }
+
+td { border:1px solid #bababa; padding:5px; }
+
+td.first { width:20%; }
+
+td.last { width:80%; }
+
+.blue-td { background:#009FE3; border:1px solid #bababa; color: #fff; }
+
+.blue-td .white { color:#fff; }
+
+.blue-td .red { color:#d52920; }
+
+.blue-td .white a { color:#ffffff; text-decoration:underline; }
+
+.blue-td .white a:hover,
+.blue-td .white a:focus { color:#ffffff; text-decoration:underline; }
+
+select.form-select { width:350px; }
+
+.footer ul {
+  list-style-type: none;
+  padding-bottom: 0px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer li {
+  display: inline;
+  font-size: 1em;
+  margin: 0 3px 0 6px;
+  text-align: center;
+}
+
+.footer li a {
+    color:#0084B6;
+    text-decoration:none;
+}
+
+.footer li a:hover,
+.footer li a:focus {
+    text-decoration:underline;
+}
+
+.rdfxml_link {
+    /* background: url("/PoolParty/images/sw-owl-blue.png")  no-repeat scroll right center transparent;*/
+    float: right;
+    line-height: 1.6em;
+    margin-left: 5px;
+    padding-right: 18px;
+    position: relative;
+    top: -5px;
+}
+
+.rdfxml_link a {
+    color:#0084B6;
+    text-decoration:none;
+}
+
+</style>
+
+<div class="container">
+    <div class="header">
+        <div class="logo"></div>
+            <div class="rdfxml_link">
+                <a href="${schemaUri}.rdf"><img src="/PoolParty/images/sw-rdf-blue.png"></a>
+            </div>
+            <div class="rdfxml_link">
+                <a href="${schemaUri}.owl"><img src="/PoolParty/images/sw-owl-blue.png"></a>
+            </div>
+    </div>
+    <h1>${schema} <span class="black">$schemaName</span></h1>
+    </span>
+    <h2>Navigation Panel</h2>
+    <table class="table">
+        <tr>
+            <td class="first strong">Classes ($classes.size())</td>
+            <td class="last">
+                #if ($classes.size() != 0)
+                    <select class="form-select" onchange="window.location.hash = this.value">
+                        #foreach($class in $classes)
+                            <option value="$class.uri.localName">$class.uri.localName</option>
+                        #end
+                    </select>
+                #end
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="strong">Relations ($relations.size())</td>
+        </tr>
+        <tr>
+            <td class="first">&#8658; Directed ($relationsDirected.size())</td>
+            <td class="last">
+                #if ($relationsDirected.size() != 0)
+                    <select class="form-select" onchange="window.location.hash = this.value">
+                        #foreach($relation in $relationsDirected)
+                            <option value="$relation.uri.localName">$relation.uri.localName</option>
+                        #end
+                    </select>
+                #end
+            </td>
+        </tr>
+        <tr>
+            <td class="first">&#8658; Symmetric ($relationsSymmetric.size())</td>
+            <td class="last">
+                #if ($relationsSymmetric.size() != 0)
+                    <select class="form-select" onchange="window.location.hash = this.value">
+                        #foreach($relation in $relationsSymmetric)
+                            <option value="$relation.uri.localName">$relation.uri.localName</option>
+                        #end
+                    </select>
+                #end
+            </td>
+        </tr>
+        <tr>
+            <td class="first">&#8658; With Inverse ($relationsWithInverses.size())</td>
+            <td class="last">
+                #if ($relationsWithInverses.size() != 0)
+                    <select class="form-select" onchange="window.location.hash = this.value">
+                        #foreach($relation in $relationsWithInverses)
+                            <option value="$relation.uri.localName">$relation.uri.localName</option>
+                        #end
+                    </select>
+                #end
+            </td>
+        </tr>
+        <tr>
+            <td class="first strong">Attributes ($attributes.size())</td>
+            <td class="last">
+                #if ($attributes.size() != 0)
+                    <select class="form-select" onchange="window.location.hash = this.value">
+                        #foreach($attribute in $attributes)
+                            <option value="$attribute.uri.localName">$attribute.uri.localName</option>
+                        #end
+                    </select>
+                #end
+            </td>
+        </tr>
+    </table>
+
+    <h2>Scheme description</h2>
+
+    <table>
+        <tr>
+            <td class="blue-td" colspan="2">
+                <span class="white strong">$schemaUri</span> (<span class="white">rdf:type</span> - <span class="white"><a href="$schemaType">$schemaType</a></span>)
+            </td>
+        </tr>
+        <tr>
+            <td class="first strong">
+                dcterms:description
+            </td>
+            <td class="last">
+                 $schemaDescription
+            </td>
+        </tr>
+    </table>
+
+    #if ($classes.size() != 0)
+        <h2>Classes</h2>
+    #end
+
+    #foreach($class in $classes)
+        <table>
+            #if($class.label.label != "Not public available")
+                <tr>
+                    <td class="blue-td" colspan="2">
+                        <a name="$class.uri.localName"></a>
+                        <span class="white strong"><a target="_blank" href="$class.uri">$class.uri.localName</a></span> (<span class="white">rdf:type</span> - <span class="white"><a href="$classType">$classType</a></span>)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="first strong">
+                        rdfs:label
+                    </td>
+                    <td class="last">
+                        $class.label.label
+                    </td>
+                </tr>
+                #foreach($subclass in $class.subClassOf)
+                    <tr>
+                        <td class="first strong">
+                            rdfs:subClassOf
+                        </td>
+                        <td class="last">
+                            $subclass.localName
+                        </td>
+                    </tr>
+                #end
+            #else
+                <tr>
+                    <td class="blue-td" colspan="2">
+                        <a name="$class.uri.localName"></a>
+                        <span class="white strong">$class.uri.localName</span> (<span class="white">rdf:type</span> - <span class="white"><a href="$classType">$classType</a></span>) - <span class="white">$class.label.label</a></span>
+                    </td>
+                </tr>
+            #end
+        </table>
+    #end
+
+    #if ($relationsDirected.size() != 0)
+        <h2>Relations</h2>
+    #end
+
+    #if($relationsDirected.size() != 0)
+        <h3>Directed</h3>
+        #foreach($relation in $relationsDirected)    
+            <table>
+                #if($relation.label.label != "Not public available")
+                    <tr>
+                        <td class="blue-td" colspan="2">
+                            <span class="white strong">$relation.uri.localName</span> (<span class="white">rdf:type</span> - <span class="white"><a href="$directedRelationType">$directedRelationType</a></span>)
+                        </td>
+                    </tr>
+                    #parse("default/schema/relation.vm")
+                #else
+                    <tr>
+                        <td class="blue-td" colspan="2">
+                            <span class="white strong">$relation.uri.localName</span> (<span class="white">rdf:type</span> - <span class="white"><a href="$directedRelationType">$directedRelationType</a></span>) - <span class="white">$relation.label.label</a></span>
+                        </td>
+                    </tr>
+                #end
+            <table>
+        #end
+    #end
+
+    #if ($relationsSymmetric.size() != 0) 
+        <h3>Symmetric</h3>
+        #foreach($relation in $relationsSymmetric)   
+            <table>
+                #if($relation.label.label != "Not public available")
+                    <tr>
+                        <td class="blue-td" colspan="2">
+                            <span class="white strong">$relation.uri.localName</span> (<span class="white">rdf:type</span> - <span class="white"><a href="$symmetricRelationType">$symmetricRelationType</a></span>)
+                        </td>
+                    </tr>
+                    #parse("default/schema/relation.vm")
+                #else
+                    <tr>
+                        <td class="blue-td" colspan="2">
+                            <span class="white strong">$relation.uri.localName</span> (<span class="white">rdf:type</span> - <span class="white"><a href="$symmetricRelationType">$symmetricRelationType</a></span>) - <span class="white">$relation.label.label</a></span>
+                        </td>
+                    </tr>
+                #end
+            <table>
+        #end
+    #end
+
+    #if ($relationsWithInverses.size() != 0)
+        <h3>With Inverse</h3>
+        #foreach($relation in $relationsWithInverses)  
+            <table>
+                #if($relation.label.label != "Not public available")
+                    <tr>
+                        <td class="blue-td" colspan="2">
+                            <span class="white strong">$relation.uri.localName</span> (<span class="white">rdf:type</span> - <span class="white"><a href="$inverseRelationType">$inverseRelationType</a></span>)
+                        </td>
+                    </tr>
+                    #parse("default/schema/relation.vm")
+                    <tr>
+                        <td class="first strong">
+                            owl:inverseof
+                        </td>
+                        <td class="last">
+                            $relation.inverseProperty.uri.localName
+                        </td>
+                    </tr>
+                #else
+                    <tr>
+                        <td class="blue-td" colspan="2">
+                            <span class="white strong">$relation.uri.localName</span> (<span class="white">rdf:type</span> - <span class="white"><a href="$inverseRelationType">$inverseRelationType</a></span>) - <span class="white">$relation.label.label</a></span>
+                        </td>
+                    </tr>
+                #end
+            <table>
+        #end
+    #end
+
+    #if($attributes.size() != 0)
+        <h2>Attributes</h2>
+    #end
+
+    #foreach($attribute in $attributes) 
+        <table>
+            #if($attribute.label.label != "Not public available")
+                <tr>
+                    <td class="blue-td" colspan="2">
+                        <span class="white strong">$attribute.uri.localName</span> (<span class="white">rdf:type</span> - <span class="white"><a href="$attributeType">$attributeType</a></span>)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="first strong">
+                        <a name="$attribute.uri.localName"></a>
+                        rdfs:label
+                    </td>
+                    <td class="last">
+                        $attribute.label.label
+                    </td>
+                </tr>
+
+                #if ($attribute.domain.size() != 0)
+                    <tr>
+                        <td class="first strong">
+                            Domain
+                        </td>
+                        <td class="last">
+                            $attribute.domain
+                        </td>
+                    </tr>
+                #end
+
+                <tr>
+                    <td class="first strong">
+                        SKOS Domain
+                    </td>
+                    <td class="last">
+                        $attribute.skosDomain.localName
+                    </td>
+                </tr>
+                <tr>
+                    <td class="first strong">
+                        Valuerestriction
+                    </td>
+                    <td class="last">
+                        $attribute.valueRestriction.label
+                    </td>
+                </tr>
+                <tr>
+                    <td class="first strong">
+                        Unique
+                    </td>
+                    <td class="last">
+                        $attribute.unique
+                    </td>
+                </tr>
+
+                #if ($attribute.version != $attribute.version)
+                    <tr>
+                        <td class="first strong">
+                            Version
+                        </td>
+                        <td class="last">
+                            $attribute.version
+                        </td>
+                    </tr>
+                #end
+            #else
+                <tr>
+                    <td class="blue-td" colspan="2">
+                        <span class="white strong">$attribute.uri.localName</span> (<span class="white">rdf:type</span> - <span class="white"><a href="$attributeType">$attributeType</a></span>) - <span class="white">$attribute.label.label</a></span>
+                    </td>
+                </tr>
+            #end
+        </table>
+    #end
+
+    <div class="footer">
+        <ul id="nav_bottom">
+            <li><a href="http://poolparty.biz/company" target="pp_contact">contact</a></li>
+            <li>|</li>
+            <li><a href="https://grips.semantic-web.at/display/POOLDOKU/Linked+Data+Publishing+with+PoolParty" target="pp_about">about</a></li>
+        </ul>
+    </div>
+</div>
+
+

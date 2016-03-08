@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+  #if( $namespaces )
+    #foreach( $namespace in $namespaces )
+      #if( $namespace.prefix.equals("") )
+      xmlns="$namespace.name"
+      #else
+      xmlns:$namespace.prefix="$namespace.name"
+      #end
+    #end
+  #end
+        >
+<head>
+  <title>$!prefLabel - $serverName</title>
+  <meta http-equiv="Cache-Control" content="no-store"/>
+  <meta http-equiv="Pragma" content="no-cache"/>
+  <meta http-equiv="Expires" content="0"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="$serverKeywords"/>
+  <link rel="icon" href="#frontendLink('default/images/favicon.ico')" type="image/x-icon" />
+  <link rel="stylesheet" href="#frontendLink('default/css/style.css')" type="text/css" />
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="#frontendLink('default/js/jquery.cookie.js')"></script>
+  <script type="text/javascript" src="#frontendLink('default/js/script.js')"></script>
+  <script type="text/javascript">
+  <!--
+    var projectView = "$projectView";
+    var sparqlEndpointUrl = "$sparqlEndpoint";
+    var viewMore = [];
+    var viewLess = [];
+    var phone = [];
+    var infoBoxText = [];
+#if($availableLanguages)
+    var languages = $availableLanguages;
+#end
+#foreach( $currentLang in $availableLanguages )
+  #set( $lang = $currentLang.label )
+    viewMore["$lang"]    = "#_($lang, 'view_more')";
+    viewLess["$lang"]    = "#_($lang, 'view_less')";
+    phone["$lang"]       = "#_($lang, $VCARD_TEL)";
+    infoBoxText["$lang"] = "#_($lang, 'no_concept_found')";
+#end
+  //-->
+  </script>
+
+#if( $showAutocomplete )
+  <link rel="stylesheet" type="text/css" href="#yuiLink('autocomplete/assets/skins/sam/autocomplete.css')" />
+  <script type="text/javascript" src="#yuiLink('yahoo/yahoo-min.js')"></script>
+  <script type="text/javascript" src="#yuiLink('event/event-min.js')"></script>
+  <script type="text/javascript" src="#yuiLink('yahoo-dom-event/yahoo-dom-event.js')"></script>
+  <script type="text/javascript" src="#yuiLink('connection/connection-min.js')"></script>
+  <script type="text/javascript" src="#yuiLink('datasource/datasource-min.js')"></script>
+  <script type="text/javascript" src="#yuiLink('autocomplete/autocomplete-min.js')"></script>
+  <script type="text/javascript" src="${contextPath}/javascript/autocomplete/RdfAutoCompleteBuilder.js"></script>
+  <script type="text/javascript">
+  <!--
+    var autocompleteNoResultsInfoBox = "$autocompleteNoResultsInfoBox";
+  
+    var PPP = new Object();
+    PPP.infoBoxText = new Array();
+    PPP.infoBoxText = infoBoxText;
+    PPP.autocompleteLanguage = "$autocompleteLanguage";
+    PPP.useLucene = "false";
+    PPP.AC = new PoolPartyAutoComplete({"useLucene":PPP.useLucene,"id":"PPPAutoCompleteBuilder", "servletPath":"${contextPath}/HTMLFrontEndAC"});
+    YAHOO.util.Event.onDOMReady(function() {
+      try {
+        PPP.AC.setDynamicDefaultAutoComplete("SearchAutoCompleteInput","SearchAutoCompleteOutput");
+        PPP.AC.oDynamicAutoComplete.maxResultsDisplayed = $autocompleteMaxResultsDisplayed;
+        PPP.AC.oDynamicAutoComplete.useShadow = false;
+        PPP.AC.oDynamicAutoComplete.autoHighlight = true;
+        PPP.AC.oDynamicAutoComplete.typeAhead = true;
+        PPP.AC.oDynamicAutoComplete.itemSelectEvent.unsubscribeAll();
+        PPP.AC.oDynamicAutoComplete.itemSelectEvent.subscribe(function(sType, aArgs) {
+          document.location.href=(aArgs[2][0]);
+        });
+        initLang();
+
+        var replacements = new Object();
+        replacements.ö = "(Ö|ö)";
+        replacements.ä = "(Ä|ä)";
+        replacements.ü = "(Ü|ü)";
+        
+        var toLowerCase = function (sText) {
+          sText = (decodeURI(sText)).toLowerCase();
+          for(umlaut in replacements){
+            if(typeof replacements[umlaut] !== "function"){
+              var regex = new RegExp( umlaut, "g" )
+              sText = sText.replace( regex, replacements[umlaut] );
+            }
+          }
+          return sText;
+        };
+
+        PPP.AC.oDynamicAutoComplete.generateRequest = function(sQuery) {
+          var Q = toLowerCase(sQuery);
+          return "lang="+PPP.autocompleteLanguage+"&query=" + Q +"&useLucene="+PPP.AC.useLucene+"&RepositoryID=${repositoryId}";
+        };
+        PPP.AC.oDynamicAutoComplete.handleResponse = function(sQuery, oResponse, oPayload) {
+          var aResults = oResponse.results;
+          var elInput = this.getInputEl();
+          var elInfoBox = document.getElementById(autocompleteNoResultsInfoBox);
+          
+          if (aResults.length > 0) {
+            elInput.style.backgroundColor = "";
+            elInfoBox.style.display = "none";
+            
+            var aListStart = new Array(),
+              aListMiddle = new Array(),
+              aListRest = new Array();
+            
+            var Q = toLowerCase(oPayload.query),
+              start = new RegExp("^" + Q, "i"),
+              middle = new RegExp(Q, "i");
+
+            for (var i = 0, len = aResults.length; i < len; i++) {
+              var oResult = aResults[i];
+              if (start.test(oResult.label[0])) {
+                aListStart.push(oResult);
+              } else if (middle.test(oResult.label[0])) {
+                aListMiddle.push(oResult);
+              } else {
+                aListRest.push(oResult);
+              }
+            }
+            oResponse.results = aListStart.concat(aListMiddle.concat(aListRest));
+          } else {
+            elInput.style.backgroundColor = "$autocompleteNoResultsBgColor";
+            if (PPP.infoBoxText[PPP.autocompleteLanguage].length > 0) {
+              elInfoBox.innerHTML = PPP.infoBoxText[PPP.autocompleteLanguage];
+              elInfoBox.style.display = "block";
+            }
+          }
+
+          this._populateList(sQuery, oResponse, oPayload);
+        };
+      }
+      catch(e) {
+        console.error(e);
+      }
+    });
+  //-->
+  </script>
+#end
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33536155-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body class="$bodyClass">
+  <div id="container">
+    <div id="header">
+      <div id="logo"><a href="http://www.poolparty.biz/"><img border="0" src="#frontendLink('default/images/pp_logo.jpg')" alt="$serverName" /></a></div>
+## Search field with autocomplete
+#if( $showAutocomplete )
+      <div id="SearchContainer">
+        <div id="ACcont">
+            <input autocomplete="off" class="yui-ac-input" id="SearchAutoCompleteInput" type="text" title="#_($defaultLanguage, "search")"/>
+            <div class="yui-ac-container" id="SearchAutoCompleteOutput"></div>
+        </div>
+        <div id="NoResultsInfoBox"></div>
+      </div>
+#end
+#if( $showSparqlEndpointLink && $projectId)
+      <a class="sparqllink" href="$sparqlEndpoint">SPARQL</a>
+#end
+    </div>
+
+## ABC-Index bar
+#if( $showIndexBar )
+    <div id="index-bar">
+      #showIndexBar()
+    </div>
+#end
+
+## Breadcrumb
+#if( $showBreadcrumb )
+    <div id="breadcrumb">
+      <ul>
+        <li><a href="$serverView">$serverName</a></li>
+#if( $projectName )
+        <li class="separator"></li>
+        <li><a href="$projectView">$projectName</a></li>
+#end
+      </ul>
+    </div>
+#end
+      
+## Language selector
+#if( $showLanguageSelector )
+    <div id="languageSelector">
+      <select name="language" onchange="changeLang(this)">
+#foreach( $lang in $availableLanguages )
+        <option value="$lang.label" #if( $lang.label.equals($defaultLanguage) ) selected="selected" #end>$lang.label</option>
+#end
+      </select>
+    </div>
+#end
+
+## Add content wrapper on project and resource view
+#if( $projectId )
+    <div class="content_wrapper">
+#end
+
+## Add Tabs
+#if( $resource ) #extractResourceData() #end
+#if( $showTabs )
+    <div id="tabs">
+      <ul>
+  #if( $showHtmlTab )
+    #if( $resource )
+        <li #if( $view.equals("html") ) class="active" #end><a href="${resource}">HTML</a></li>
+    #else
+        <li #if( $view.equals("html") ) class="active" #end><a href="/${projectId}">HTML</a></li>
+    #end
+  #end
+  #if( $showVisualTab)
+    #if( $resource )
+        <li #if( $view.equals("visual") ) class="active" #end><a href="${resource}.visual">Visual</a></li>
+    #else
+        <li #if( $view.equals("visual") ) class="active" #end><a href="/${projectId}.visual">Visual</a></li>
+    #end
+  #end
+  #if( $showMapTab )
+    #if( $resource )
+      #if( $resourceData.lon && $resourceData.lat )
+        <li #if( $view.equals("map") ) class="active" #end><a href="${resource}.map">Map</a></li>
+      #end
+    #elseif( $projectId )
+        <li #if( $view.equals("map") ) class="active" #end><a href="/${projectId}.map">Map</a></li>
+    #end
+  #end
+      </ul>
+    </div>
+#end
+
+## Content
+    <div id="main_content">
