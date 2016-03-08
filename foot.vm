@@ -6,33 +6,26 @@
     </div>
   </div>    <!-- container -->
   <footer>
-
-
-          <div class="mythemes-footer-social">
+    <div class="social">
+        <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                  <a href="http://twitter.com/joinedup_data" class="mythemes-icon-twitter" target="_blank"></a><a href="http://juds.joinedupdata.org/dev/feed/" class="mythemes-icon-rss" target="_blank"></a>                                </div>
+            </div>
+        </div>
+        </div>
+        <div class="copyright">
             <div class="container">
                 <div class="row">
-
                     <div class="col-lg-12">
-                        <a href="http://twitter.com/joinedup_data" class="mythemes-icon-twitter" target="_blank"></a><a href="http://juds.joinedupdata.org/dev/feed/" class="mythemes-icon-rss" target="_blank"></a>                                </div>
+                    <p><span>© 2016 <a href="http://devinit.org"> Development Initiatives</a> + <a href="http://www.publishwhatyoufund.org"> Publish What You Fund</a> </span></p>
+                    <p>Development Initiatives Poverty Research, registered in England and Wales (06368740)</p>
+                    <p>Publish What You Fund, registered in England and Wales (1158362). </p>
+                    <p><a href="mailto:info@joinedupdata.org">info@joinedupdata.org.</a> Twitter: <a href="https://twitter.com/joinedup_data" target="_blank">@Joinedup_Data</a></p>
+                    </div>
                 </div>
             </div>
         </div>
-
-
-                  <div class="mythemes-copyright">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                <p><span>© 2016 <a href="http://devinit.org"> Development Initiatives</a> + <a href="http://www.publishwhatyoufund.org"> Publish What You Fund</a> </span></p>
-                                <p>Development Initiatives Poverty Research, registered in England and Wales (06368740)</p>
-                                <p>Publish What You Fund, registered in England and Wales (1158362). </p>
-                                <p><a href="mailto:info@joinedupdata.org">info@joinedupdata.org.</a> Twitter: <a href="https://twitter.com/joinedup_data" target="_blank">@Joinedup_Data</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-            <script type="text/javascript"></script>
-        </footer>
+      </footer>
 </body>
 </html>
