@@ -1035,6 +1035,13 @@ color: red;
   bottom: 0px;
   width: 100%;
 }
+.social{
+  width: 100%;
+  background: black;
+  color: #999;
+  padding: 1em;
+  height: 2em;
+}
 .copyrights{
   width: 100%;
   background: black;

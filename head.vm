@@ -21,6 +21,7 @@
   <link href='https://fonts.googleapis.com/css?family=Fira+Sans' rel='stylesheet' type='text/css'>
   <link rel="icon" href="#frontendLink('default/images/favicon.ico')" type="image/x-icon" />
   <link rel="stylesheet" href="#frontendLink('default/css/style.css')" type="text/css" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" crossorigin="anonymous">
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
   <script type="text/javascript" src="#frontendLink('default/js/jquery.cookie.js')"></script>
   <script type="text/javascript" src="#frontendLink('default/js/script.js')"></script>
