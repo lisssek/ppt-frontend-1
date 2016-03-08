@@ -2,6 +2,18 @@
 #if( $projectId )
     </div>  <!-- content_wrapper -->
 #end
+    <div id="footer">
+      <ul id="nav_bottom">
+        <li><a href="http://poolparty.biz/company" target="pp_contact">contact</a></li>
+        <li>|</li>
+        <li><a href="https://grips.semantic-web.at/display/POOLDOKU/Linked+Data+Publishing+with+PoolParty" target="pp_about">about</a></li>
+        <li>|</li>
+        <li><a href="http://www.w3.org/2004/02/skos/" target="pp_skos">skos</a></li>
+      </ul>
+	<!--p id="poolparty">Powered by <a href="http://poolparty.biz"><img class="pplogo" border="0" src="#frontendLink('default/images/pp_logo.jpg')" alt="PoolParty Thesaurus Manager (PPT)" /></a> &
+      	     <a href="http://lod2.eu"><img  class="lod2logo" border="0" src="#frontendLink('default/images/lod2_logo.jpg')" alt="LOD2"/></a>
+	</p-->
+    </div>
   </div>    <!-- container -->
   <footer>
 
