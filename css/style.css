@@ -1,6 +1,6 @@
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
     border:0 none;
-    font-family: "Trebuchet MS",Verdana,sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     line-height: 1.4em;
     font-style:normal;
     margin:0;
@@ -66,7 +66,7 @@ text-decoration:underline;}
     background: url("frontendroot?fileName=default/images/lupe.gif") no-repeat scroll 8px 6px #F8F9F9;
 	border:1px solid #E4E4E4;
 	padding:6px 5px 6px 30px;
-	font-family: "Trebuchet MS",Verdana,sans-serif;
+	font-family: 'Fira Sans', sans-serif;
 	color:#999;
 	width: 290px;
 	-webkit-border-radius: 3px;
@@ -145,7 +145,7 @@ border-radius:0px \0/;
 	background: linear-gradient(top,  #ffffff 0%,#f6f8f8 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f8f8',GradientType=0 );
 	}
-	
+
 	#index-bar ul li a:hover{
 	text-decoration:none;
 	background: #f6f8f8;
@@ -170,11 +170,11 @@ border-radius: 5px;
     overflow: hidden;
     padding: 17px;
 }
- 
+
 .content_wrapper #main_content {
     padding: 17px 17px 3px;
 }
-	
+
 #tabs {
     float: left;
     width: 100%;
@@ -297,10 +297,10 @@ float: left;
 	-pie-background: linear-gradient(#fff, #f6f8f8);
 	behavior: url(/default/js/PIE.htc);
 	}
-	
+
 .even{
 clear:both}
-	
+
 .box{
 	float:none;
     margin: 15px 0;
@@ -309,7 +309,7 @@ clear:both}
 	min-height: 0;
 	display:block;
 	}
-	
+
 .addressbox{
 	min-height:145px;}
 
@@ -324,11 +324,11 @@ clear:both}
 	-pie-background: linear-gradient(#EEF5F8, #D7E9EF);
 	behavior: url(frontendroot?fileName=default/js/PIE.htc);
 	}
-	
+
 .more_less {
     margin: 15px;
 }
-	
+
 a.more{
 	text-align:center;
 	font-size:0.846em;
@@ -365,18 +365,18 @@ a.more:hover{
 	background: -ms-linear-gradient(top, #009FE3 0%,#11B7EA 100%);
 	background: linear-gradient(top, #009FE3 0%,#11B7EA 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009FE3', endColorstr='#11B7EA',GradientType=0 );}
-	
+
 .odd{
     margin: 0 0 30px 15px;}
 
-	
+
 a.sparqllink{
 float:right;
 background: url("frontendroot?fileName=default/images/extlink.gif") no-repeat scroll right center transparent;
 padding-right:15px;
 position: relative;
     top: -5px;}
-	
+
 #main_content {
 	clear:both;
 }
@@ -563,7 +563,7 @@ clear:both;}
     padding-bottom:10px;
     width:420px;
     border-left: 1px solid #E6E6E6;
-    hangingindent 
+    hangingindent
     padding-left: 10px ;
     text-indent: -22px ;
 }
@@ -595,7 +595,7 @@ clear:both;}
     background: url("frontendroot?fileName=default/images/rdfxml_icon.png") no-repeat scroll left center transparent;
     padding-left: 18px;
 	margin-right: 5px;
-} 
+}
 .download_link.vdex {
     background-image:url("frontendroot?fileName=default/images/vdex_icon.png");
     background-repeat:no-repeat;
@@ -733,10 +733,10 @@ ol, ul {
 
 /*  --- Text style ---*/
 .standard_form span.standard_text {
-    font-size: .75em; 
-    padding-left: 10px; 
-    padding-right: 10px; 
-    font-style: italic; 
+    font-size: .75em;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-style: italic;
     vertical-align: top;
 }
 
@@ -745,7 +745,7 @@ ol, ul {
     /* background-color: #F7F3EF; */
     border: 1px solid #C4C4C4;
     float: left;
-    font-family: Arial, Verdana, SunSans-Regular, Sans-Serif;
+    font-family: 'Fira Sans', sans-serif;
     font-size: .75em;
     margin: 0px 0px 8px 0px;
     padding: 3px;
@@ -753,8 +753,8 @@ ol, ul {
 }
 
 .standard_form input.short_input {
-    border: 1px solid #C4C4C4;	
-    font-family: Arial, Verdana, SunSans-Regular, Sans-Serif;
+    border: 1px solid #C4C4C4;
+    font-family: 'Fira Sans', sans-serif;
     font-size: .75em;
     margin: 0px 0px 15px 0px;
     padding: 3px;
@@ -765,11 +765,11 @@ ol, ul {
     /* background-color: #F7F3EF; */
     border: 1px solid #C4C4C4;
     float: left;
-    font-family: Arial, Verdana, SunSans-Regular, Sans-Serif;
+    font-family: 'Fira Sans', sans-serif;
     font-size: .75em;
     margin: 0px 0px 8px 0px;
     padding: 3px;
-    width: 400px; 
+    width: 400px;
 }
 
 
@@ -795,15 +795,15 @@ ol, ul {
     font-size: .75em;
     margin: 5px 5px 10px 20px;
     text-align: left;
-    width: 60px;	
+    width: 60px;
 }
 
 .standard_form input.fieldset_input {
     border: 1px solid #C4C4C4;
     float: left;
-    font-family: Arial, Verdana, SunSans-Regular, Sans-Serif;
+    font-family: 'Fira Sans', sans-serif;
     font-size: .75em;
-    margin: 5px 10px 10px 0px; 
+    margin: 5px 10px 10px 0px;
     padding: 3px;
     width: 150px;
 }
@@ -852,7 +852,7 @@ ol, ul {
 #response_table_area {
     border-top: solid 1px #EAE6E2;
     clear: both;
-    display: block;	
+    display: block;
     margin-top: 1em;
     padding-top: 1em;
 }
@@ -915,7 +915,7 @@ ol, ul {
     font-weight: bold;
 }
 .data_table {
-    margin-top: 15px;	
+    margin-top: 15px;
     margin-left:40px;
     margin-right:40px;
 }
@@ -928,7 +928,7 @@ ol, ul {
 .data_table th {
     color: #000;
     border-top: solid 1px #E5E5E5;
-    border-bottom: solid 1px #E5E5E5;	
+    border-bottom: solid 1px #E5E5E5;
     font-weight: normal;
     text-align: left;
     padding: 6px 6px 6px 12px;
@@ -937,7 +937,7 @@ table.data_table {
     font-size: .8em;
     border-collapse: collapse;
 }
-.data_table td {	
+.data_table td {
     /* border-top: solid 1px #E5E5E5;
        border-bottom: solid 1px #E5E5E5; */
     padding: 6px 6px 6px 12px;
@@ -979,7 +979,7 @@ table.data_table {
 }
 
 .ld-Alternative .Label {
-    font-family: italic;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 #thumbnail{
@@ -1004,4 +1004,21 @@ color: red;
     left: 567px;
     position: absolute;
     top: 5px;
+}
+/** allan.lukwago@devinit.org custom styles**/
+.banner {
+  width: 100%;
+  height: 4em;
+  background-image:url("frontendroot?fileName=default/images/banner.jpg");
+}
+.vignet {
+  width: 100%;
+  height: 4em;
+  position: absolute;
+  top: 0;
+  background-color: rgba( 0,0,0, 0.5 );
+}
+.banner h1{
+  font-size: 1.3em;
+  text-align: center;
 }
