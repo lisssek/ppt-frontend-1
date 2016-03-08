@@ -1040,10 +1040,22 @@ color: red;
   background: black;
   color: #999;
   padding: 1em;
-  height: 2em;
+  height: 4em;
 }
 .social a{
-  font-size: 1.2em;
+  /* font-size: 1.4em; */
+  color: white;
+  border: solid;
+  background-color: #00b0ef;
+  border-radius: 50px;
+  border: none;
+  width: 3.2em;
+  height: 3.1em;
+}
+.social a:before {
+  font-size: 1.7em;
+  margin-left: 13px;
+  line-height: 1.8;
 }
 .copyrights{
   width: 100%;
