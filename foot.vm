@@ -2,18 +2,28 @@
 #if( $projectId )
     </div>  <!-- content_wrapper -->
 #end
-    <div id="footer">
-      <ul id="nav_bottom">
-        <li><a href="http://poolparty.biz/company" target="pp_contact">contact</a></li>
-        <li>|</li>
-        <li><a href="https://grips.semantic-web.at/display/POOLDOKU/Linked+Data+Publishing+with+PoolParty" target="pp_about">about</a></li>
-        <li>|</li>
-        <li><a href="http://www.w3.org/2004/02/skos/" target="pp_skos">skos</a></li>
-      </ul>
-	<!--p id="poolparty">Powered by <a href="http://poolparty.biz"><img class="pplogo" border="0" src="#frontendLink('default/images/pp_logo.jpg')" alt="PoolParty Thesaurus Manager (PPT)" /></a> &
-      	     <a href="http://lod2.eu"><img  class="lod2logo" border="0" src="#frontendLink('default/images/lod2_logo.jpg')" alt="LOD2"/></a>
-	</p-->
-    </div>
   </div>    <!-- container -->
+  <footer>
+      <div class="mythemes-footer-social">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <a href="http://twitter.com/joinedup_data" class="mythemes-icon-twitter" target="_blank"></a><a href="http://juds.joinedupdata.org/dev/feed/" class="mythemes-icon-rss" target="_blank"></a>                                </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mythemes-copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                            <p><span>© 2016 <a href="http://devinit.org"> Development Initiatives</a> + <a href="http://www.publishwhatyoufund.org"> Publish What You Fund</a> </span></p>
+                            <p>Development Initiatives Poverty Research, registered in England and Wales (06368740)</p>
+                            <p>Publish What You Fund, registered in England and Wales (1158362). </p>
+                            <p><a href="mailto:info@joinedupdata.org">info@joinedupdata.org.</a> Twitter: <a href="https://twitter.com/joinedup_data" target="_blank">@Joinedup_Data</a></p>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+        </footer>
 </body>
 </html>
