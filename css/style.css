@@ -1008,17 +1008,19 @@ color: red;
 /** allan.lukwago@devinit.org custom styles**/
 .banner {
   width: 100%;
-  height: 4em;
-  background: url("frontendroot?fileName=default/images/bannger.jpg");
+  height: 5em;
+  background: url("frontendroot?fileName=default/images/banner.jpg");
 }
 .vignet {
   width: 100%;
-  height: 4em;
+  height: 5em;
   position: absolute;
   top: 0;
   background-color: rgba( 0,0,0, 0.5 );
 }
-.banner h1{
+.header-title{
   font-size: 1.3em;
+  width: 100%;
   text-align: center;
+  margin-top: 2.5em;
 }

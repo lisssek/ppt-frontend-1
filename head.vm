@@ -156,10 +156,11 @@
   </script>
 </head>
 <body class="$bodyClass">
-  <div class="banner">
-    <h1>Joined-up Data standards</h1>
+  <div class="header">
+    <div class="banner"></div>
+    <div class="vignet"></div>
+    <div class ="header-title"><h1>Joined-up Data standards</h1></div>
   </div>
-  <div class="vignet"></div>
   <div id="container">
     <div id="header">
       <div id="logo"><a href="http://www.poolparty.biz/"><img border="0" src="#frontendLink('default/images/pp_logo.jpg')" alt="$serverName" /></a></div>
