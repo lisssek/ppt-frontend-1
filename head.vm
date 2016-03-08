@@ -163,7 +163,9 @@
   </div>
   <div id="container">
     <div id="header">
-      <div id="logo"><a href="http://www.poolparty.biz/"><img border="0" src="#frontendLink('default/images/pp_logo.jpg')" alt="$serverName" /></a></div>
+      <div class="sub-heading">
+        <h2>Thesaurus</h2>
+      </div>
 ## Search field with autocomplete
 #if( $showAutocomplete )
       <div id="SearchContainer">

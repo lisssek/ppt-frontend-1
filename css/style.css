@@ -15,7 +15,7 @@ html {
     background: url("frontendroot?fileName=default/images/gradient_bg.png") repeat-x scroll 0 0 #009FE3;
 }
 body {
-    background: url("frontendroot?fileName=default/images/water-texture2.png") repeat scroll 0 0 transparent;
+  background-color: #BA0C2F;
     font-size: 0.813em;
     color:#474747;
 	padding-bottom: 60px;
@@ -1018,9 +1018,16 @@ color: red;
   top: 0;
   background-color: rgba( 0,0,0, 0.5 );
 }
-.header-title{
-  font-size: 1.3em;
+.header-title h1{
+  font-size: 1.6em;
   width: 100%;
   text-align: center;
-  margin-top: 2.5em;
+  position: absolute;
+  top: 0;
+  margin-top: 1em;
+  color: white;
+}
+.sub-heading{
+  text-align: center;
+  font-size: 1.3em;
 }
