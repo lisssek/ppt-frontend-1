@@ -56,7 +56,7 @@
   <script type="text/javascript">
   <!--
     var autocompleteNoResultsInfoBox = "$autocompleteNoResultsInfoBox";
-  
+
     var PPP = new Object();
     PPP.infoBoxText = new Array();
     PPP.infoBoxText = infoBoxText;
@@ -80,7 +80,7 @@
         replacements.ö = "(Ö|ö)";
         replacements.ä = "(Ä|ä)";
         replacements.ü = "(Ü|ü)";
-        
+
         var toLowerCase = function (sText) {
           sText = (decodeURI(sText)).toLowerCase();
           for(umlaut in replacements){
@@ -100,15 +100,15 @@
           var aResults = oResponse.results;
           var elInput = this.getInputEl();
           var elInfoBox = document.getElementById(autocompleteNoResultsInfoBox);
-          
+
           if (aResults.length > 0) {
             elInput.style.backgroundColor = "";
             elInfoBox.style.display = "none";
-            
+
             var aListStart = new Array(),
               aListMiddle = new Array(),
               aListRest = new Array();
-            
+
             var Q = toLowerCase(oPayload.query),
               start = new RegExp("^" + Q, "i"),
               middle = new RegExp(Q, "i");
@@ -155,6 +155,7 @@
   </script>
 </head>
 <body class="$bodyClass">
+  <div class="banner"></div>
   <div id="container">
     <div id="header">
       <div id="logo"><a href="http://www.poolparty.biz/"><img border="0" src="#frontendLink('default/images/pp_logo.jpg')" alt="$serverName" /></a></div>
@@ -192,7 +193,7 @@
       </ul>
     </div>
 #end
-      
+
 ## Language selector
 #if( $showLanguageSelector )
     <div id="languageSelector">
