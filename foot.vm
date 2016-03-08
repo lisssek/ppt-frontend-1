@@ -9,9 +9,9 @@
     <div class="social">
         <div class="container">
             <div class="row">
-              <p>
+              <div class="col-lg-12">
                   <a href="http://twitter.com/joinedup_data" class="fa fa-twitter" target="_blank"></a>
-              </p>
+              </div>
             </div>
         </div>
         </div>
