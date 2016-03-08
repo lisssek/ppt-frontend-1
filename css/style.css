@@ -1009,7 +1009,7 @@ color: red;
 .banner {
   width: 100%;
   height: 4em;
-  background-image:url("frontendroot?fileName=default/images/banner.jpg");
+  background: url("frontendroot?fileName=default/images/bannger.jpg");
 }
 .vignet {
   width: 100%;
