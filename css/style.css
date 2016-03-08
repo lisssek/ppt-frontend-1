@@ -1054,8 +1054,11 @@ color: red;
 }
 .social a:before {
   font-size: 1.7em;
-  margin-left: 13px;
+  margin-left: 11px;
   line-height: 1.8;
+}
+.social a:hover{
+  text-decoration: none;
 }
 .copyrights{
   width: 100%;
