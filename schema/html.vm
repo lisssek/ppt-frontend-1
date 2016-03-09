@@ -2,7 +2,6 @@
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   border: 0 none;
-  font-family: "Trebuchet MS",Verdana,sans-serif;
   line-height: 1.4em;
   font-style: normal;
   margin: 0;
@@ -14,18 +13,15 @@ html {
     height: 100%;
     overflow-y: scroll;
     width: 100%;
-    background: url("/PoolParty/images/gradient_bg.png") repeat-x scroll 0 0 #009FE3;
 }
 
 body {
-    background: url("/PoolParty/images/water-texture2.png") repeat scroll 0 0 transparent;
     font-size: 0.813em;
     color:#333;
     padding-bottom: 60px;
 }
 
-.logo { 
-    background: url("/PoolParty/images/pp_logo.jpg") no-repeat scroll center center transparent;
+.logo {
     width: 140px;
     height: 51px;
     padding: 20px 0;
@@ -280,7 +276,7 @@ select.form-select { width:350px; }
 
     #if($relationsDirected.size() != 0)
         <h3>Directed</h3>
-        #foreach($relation in $relationsDirected)    
+        #foreach($relation in $relationsDirected)
             <table>
                 #if($relation.label.label != "Not public available")
                     <tr>
@@ -300,9 +296,9 @@ select.form-select { width:350px; }
         #end
     #end
 
-    #if ($relationsSymmetric.size() != 0) 
+    #if ($relationsSymmetric.size() != 0)
         <h3>Symmetric</h3>
-        #foreach($relation in $relationsSymmetric)   
+        #foreach($relation in $relationsSymmetric)
             <table>
                 #if($relation.label.label != "Not public available")
                     <tr>
@@ -324,7 +320,7 @@ select.form-select { width:350px; }
 
     #if ($relationsWithInverses.size() != 0)
         <h3>With Inverse</h3>
-        #foreach($relation in $relationsWithInverses)  
+        #foreach($relation in $relationsWithInverses)
             <table>
                 #if($relation.label.label != "Not public available")
                     <tr>
@@ -356,7 +352,7 @@ select.form-select { width:350px; }
         <h2>Attributes</h2>
     #end
 
-    #foreach($attribute in $attributes) 
+    #foreach($attribute in $attributes)
         <table>
             #if($attribute.label.label != "Not public available")
                 <tr>
@@ -438,5 +434,3 @@ select.form-select { width:350px; }
         </ul>
     </div>
 </div>
-
-
