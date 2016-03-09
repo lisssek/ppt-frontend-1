@@ -1030,7 +1030,7 @@ color: red;
   padding-top: 1em;
 }
 .footer{
-  position: absolute;
+  position: relative;
   bottom: 0px;
   width: 100%;
 }
