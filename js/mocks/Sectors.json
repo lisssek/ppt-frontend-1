@@ -1,0 +1,59 @@
+{
+  "schemes": [ {
+  "uri" : "http://joinedupdata.org/Sectors/itep_2",
+  "title" : "itep",
+  "subjects" : [ "Development Initatives Investments To End Poverty " ],
+  "descriptions" : [ "Investments to End Poverty programme looks at the impact of all resources on poverty reduction. It provides independent, reliable, accessible data and information on resource flows and promotes the idea that all resources have a role to play in getting poverty to zero." ],
+  "authors" : [ "beata_lisowska" ],
+  "publishers" : [ "Development Initiatives" ],
+  "contributors" : [ "beata_lisowska" ]
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/world_bank_themes",
+  "title" : "world_bank_themes",
+  "subjects" : [ "World Bank Themes" ],
+  "descriptions" : [ "World Bank Themes and Sectors provide a classification for Projects and Operations activities by the World Bank. " ],
+  "authors" : [ "beata_lisowska" ],
+  "publishers" : [ "Development Initiatives" ],
+  "contributors" : [ "beata_lisowska" ]
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/crs",
+  "title" : "crs",
+  "subjects" : [ "OECD DAC Creditor Reporting System " ],
+  "descriptions" : [ "The objective of the CRS Aid Activity database is to provide a set of readily available basic data that enables analysis on where aid goes, what purposes it serves and what policies it aims to implement, on a comparable basis for all DAC members. Data are collected on individual projects and programmes. Focus is on financial data but some descriptive information is also made available." ],
+  "authors" : [ "beata_lisowska" ],
+  "publishers" : [ "Development Initiatives" ],
+  "contributors" : [ "beata_lisowska" ]
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/world_bank_sectors",
+  "title" : "world_bank_sectors",
+  "subjects" : [ "World Bank Sectors" ],
+  "descriptions" : [ "World Bank Themes and Sectors provide a classification for Projects and Operations activities by the World Bank. " ],
+  "authors" : [ "beata_lisowska" ],
+  "publishers" : [ "Development Initiatives" ],
+  "contributors" : [ "beata_lisowska" ]
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/ntee_2",
+  "title" : "ntee",
+  "subjects" : [ "IRS National Taxonomy of Exemption Entities" ],
+  "descriptions" : [ "The National Taxonomy of Exempt Entities (NTEE) offers a definitive classification system for nonprofit organizations recognized as tax exempt under the Internal Revenue Code. These charitable organizations are exempt from federal taxes because of their religious, educational, scientific, and public purposes. The broad range of their activities includes health, human services, arts and culture, education, research, and advocacy. The use of NTEE is key to illuminating the diversity of the nonprofit sector." ],
+  "authors" : [ "beata_lisowska" ],
+  "publishers" : [ "Development Initiatives" ],
+  "contributors" : [ "beata_lisowska" ]
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic",
+  "title" : "isic",
+  "subjects" : [ "UN International Standard Industrial Classification of All Economic Activities" ],
+  "descriptions" : [ "Wide use has been made of ISIC, both nationally and internationally, in classifying data according to kind of economic activity in the fields of production, employment, gross domestic product and other statistical areas. ISIC is a basic tool for studying economic phenomena, fostering international comparability of data, providing guidance for the development of national classifications and for promoting the development of sound national statistical systems" ],
+  "authors" : [ "beata_lisowska" ],
+  "publishers" : [ "Development Initiatives" ],
+  "contributors" : [ "beata_lisowska" ]
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/cofog",
+  "title" : "cofog",
+  "subjects" : [ "UN Classification of Functions of Government " ],
+  "descriptions" : [ "COFOG is used to distinguish between the individual and collective services provided by general government and identifies consumption expenditures that benefit individual households and that are transferred to Division 14 of COICOP in order to derive the 1993 SNA aggregate of actual final consumption of households (or actual individual consumption). The divisions, groups and classes covering these expenditures are clearly indicated in the classification. COFOG also permits trends in government outlays on particular functions or purposes to be examined over time. Conventional government accounts are not usually suitable for this purpose, since they reflect the organizational structure of governments and time-series may be distorted by organizational changes. For example, if a government establishes a new department that brings together some of the functions previously administered by several departments or at several levels of government, it will not usually be possible to use conventional government accounts to compare expenditure on these purposes over time. COFOG is also used for making intercountry comparisons of the extent to which governments are involved in economic and social functions." ],
+  "authors" : [ "beata_lisowska" ],
+  "publishers" : [ "Development Initiatives" ],
+  "contributors" : [ "beata_lisowska" ]
+} ]
+}

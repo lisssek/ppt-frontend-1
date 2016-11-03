@@ -1,4 +1,4 @@
-// methods to set and get the language via cookie 
+// methods to set and get the language via cookie
 var initLang = function() {
   if ($.cookie("language") == null) {
     $.cookie("language", PPP.autocompleteLanguage);
@@ -63,14 +63,17 @@ $(document).ready(function() {
 
   // init search field
   $("#SearchAutoCompleteInput").clearField().bind(($.browser.opera ? "keypress" : "keydown"), function(event) {
-    if (event.keyCode == "13" && $(this).val() != "" && !$(".yui-ac-content").is(":visible")) {
-    var template = PPP.autocompleteLanguage == "de" ? "nicht_gefunden" : "not_found";
-      document.location.href = projectView + "." + template;
+    console.log('input');
+    if (event.keyCode == "13") {
+      console.log(' PPP.autocompleteLanguage: ', PPP);
+      // var template = PPP.autocompleteLanguage == "de" ? "nicht_gefunden" : "not_found";
+      // console.log('template', template);
+      // document.location.href = projectView + "." + template;
       return false;
     }
     return true;
   });
-  
+
   // set click event to characters in the index bar
   $("#index-bar").find("a").click(function() {
     $(this).showIndex();
@@ -89,8 +92,8 @@ $(document).ready(function() {
       $(link).text(viewLess[PPP.autocompleteLanguage]);
     }
   }
-  
-  
+
+
   moreIndex = function (facetId) {
     var height = $("div.index_list").height();
     var maxHeight = $("div.index_list ul").height();
@@ -114,7 +117,7 @@ $(document).ready(function() {
     $("div.more_less a.more:not(:visible)").show();
   }
 
-  
+
   // Sparql all geo data and set as markers
   addMarkers = function (iconUrl) {
     var query = "\
@@ -152,7 +155,7 @@ $(document).ready(function() {
       });
     });
   }
-  
+
 
   // put the content for the map popup out
   generatePopupContent = function (title, thumbnail, postalCode, locality, streetAddress, tel) {
@@ -168,7 +171,7 @@ $(document).ready(function() {
       }
       if (locality) {
         content += postalCode + ' ' + locality + '<br />';
-      } 
+      }
       if (tel) {
         content += phone[PPP.autocompleteLanguage] + ': ' + tel;
       }
@@ -188,16 +191,16 @@ $(document).ready(function() {
     for (;lat > 60; lat = lat/10);
     return transform(lon, lat);
   };
-  
-  
+
+
   // transforms geo data
   transform = function (lon, lat) {
     var fromProj  = new OpenLayers.Projection("EPSG:4326");
     var toProj    = new OpenLayers.Projection("EPSG:900913");
     return new OpenLayers.LonLat(lon, lat).transform(fromProj, toProj);
   }
-  
-  
+
+
   // add the OpenStreetMap
   addMap = function () {
     map = new OpenLayers.Map ("map", {
@@ -214,27 +217,27 @@ $(document).ready(function() {
       projection: new OpenLayers.Projection("EPSG:4326"),
       displayProjection: new OpenLayers.Projection("EPSG:4326")
     } );
-    
+
     var layer = new OpenLayers.Layer.OSM.Mapnik("Mapnik");
-    map.addLayer(layer); 
-          
+    map.addLayer(layer);
+
     markers = new OpenLayers.Layer.Markers("Markers");
     map.addLayer(markers);
   };
-  
-  
+
+
   // add a marker on the map
   addMarker = function (position, popupContentHTML, iconUrl, showPopupOnLoad, showPopupOnHover, clickCallBack) {
     var popupClass = OpenLayers.Class(OpenLayers.Popup.FramedCloud, {
-      'autoSize': true, 
+      'autoSize': true,
       'minSize': new OpenLayers.Size(300, 200)
     });
-    
+
     var size = new OpenLayers.Size(21, 25);
     var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
     var icon = new OpenLayers.Icon(iconUrl, size, offset);
-  
-    var feature = new OpenLayers.Feature(markers, position); 
+
+    var feature = new OpenLayers.Feature(markers, position);
     feature.closeBox              = !showPopupOnHover;
     feature.popupClass            = popupClass;
     feature.data.popupContentHTML = popupContentHTML;
@@ -268,10 +271,10 @@ $(document).ready(function() {
     } else {
       marker.events.register("mousedown", feature, markerToggle);
     }
-    
+
     markers.addMarker(marker);
   };
-  
+
 });
 
 
@@ -327,7 +330,7 @@ $.fn.extend({
           concepts.sort(function(a, b) {
             var la = a.prefLabel.value.toLowerCase();
             var lb = b.prefLabel.value.toLowerCase();
-            return (la == lb) ? 0  : 
+            return (la == lb) ? 0  :
                    (la < lb)  ? -1 : 1;
           });
           var ul_list = $("<ul>");

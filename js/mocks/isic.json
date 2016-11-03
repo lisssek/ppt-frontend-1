@@ -1,0 +1,64 @@
+[ {
+  "uri" : "http://joinedupdata.org/Sectors/isic/mining-and-quarrying_isic",
+  "prefLabel" : "mining and quarrying_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/professional-scientific-and-technical-activities_isic",
+  "prefLabel" : "professional scientific and technical activities_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/public-administration-and-defence-compulsory-social-security_isic",
+  "prefLabel" : "public administration and defence compulsory social security_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/activities-of-extraterritorial-organizations-and-bodies_isic",
+  "prefLabel" : "activities of extraterritorial organizations and bodies_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/transportation-and-storage_isic",
+  "prefLabel" : "transportation and storage_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/construction_isic",
+  "prefLabel" : "construction_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/arts-entertainment-and-recreation_isic",
+  "prefLabel" : "arts entertainment and recreation_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/education_isic",
+  "prefLabel" : "education_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/activities-of-households-as-employers-undifferentiated-goods-and-servicesproducing-activities-of-households-for-own-use_isic",
+  "prefLabel" : "activities of households as employers undifferentiated goods and services producing activities of households for own use_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/real-estate-activities_isic",
+  "prefLabel" : "real estate activities_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/wholesale-and-retail-trade-repair-of-motor-vehicles-and-motorcycles_isic",
+  "prefLabel" : "wholesale and retail trade repair of motor vehicles and motorcycles_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/information-and-communication_isic",
+  "prefLabel" : "information and communication_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/accommodation-and-food-service-activities_isic",
+  "prefLabel" : "accommodation and food service activities_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/water-supply-sewerage-waste-management-and-remediation-activities_isic",
+  "prefLabel" : "water supply sewerage waste management and remediation activities_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/electricity-gas-steam-and-air-conditioning-supply_isic",
+  "prefLabel" : "electricity gas steam and air conditioning supply_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/manufacturing_isic",
+  "prefLabel" : "manufacturing_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/administrative-and-support-service-activities_isic",
+  "prefLabel" : "administrative and support service activities_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/financial-and-insurance-activities_isic",
+  "prefLabel" : "financial and insurance activities_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/other-service-activities_isic",
+  "prefLabel" : "other service activities_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/agriculture-forestry-and-fishing_isic",
+  "prefLabel" : "agriculture forestry and fishing_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/human-health-and-social-work-activities_isic",
+  "prefLabel" : "human health and social work activities_isic"
+} ]

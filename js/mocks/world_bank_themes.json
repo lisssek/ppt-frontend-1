@@ -1,0 +1,34 @@
+[ {
+  "uri" : "http://joinedupdata.org/Sectors/world_bank_themes/environment-and-natural-resources-management_wb",
+  "prefLabel" : "environment and natural resources management_wb"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/world_bank_themes/trade-and-integration_wb",
+  "prefLabel" : "trade and integration_wb"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/world_bank_themes/financial-and-private-sector-development_wb",
+  "prefLabel" : "financial and private sector development_wb"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/world_bank_themes/rule-of-law_wb",
+  "prefLabel" : "rule of law_wb"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/world_bank_themes/economic-management_wb",
+  "prefLabel" : "economic management_wb"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/world_bank_themes/public-sector-governance_wb",
+  "prefLabel" : "public sector governance_wb"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/world_bank_themes/urban-development_wb",
+  "prefLabel" : "urban development_wb"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/world_bank_themes/human-development_wb",
+  "prefLabel" : "human development_wb"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/world_bank_themes/social-development-gender-and-inclusion_wb",
+  "prefLabel" : "social development gender and inclusion_wb"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/world_bank_themes/rural-development_wb",
+  "prefLabel" : "rural development_wb"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/world_bank_themes/social-protection-and-risk-management_wb",
+  "prefLabel" : "social protection and risk management_wb"
+} ]
