@@ -1,5 +1,5 @@
-var schemaBase = 'http://localhost/PoolParty/OpenConfigPathResourceProvider/frontendroot?fileName=default/js';
-var conceptsBase = 'http://localhost/PoolParty/OpenConfigPathResourceProvider/frontendroot?fileName=default/js';
+
+var base = 'http://joinedupdata.org/PoolParty/api/thesaurus/';
 
 function init(){
   if (location.pathname === '/') {
@@ -19,6 +19,17 @@ function ajaxLoarder(){
   location.hash = "#results";
 }
 
+function getSearchData (){
+  return {
+    term: $('#term').val(),
+    code: $('#code').val(),
+    source: $('#source').val(),
+    start: $('#start').val(),
+    match: $('#match').val(),
+    destination: $('#destination').val(),
+  }
+}
+
 function search() {
   searchToggleOptions();
   accordionResults();
@@ -26,15 +37,8 @@ function search() {
   sideBarSearch();
   $('#submit').click(function(event){
     ajaxLoarder();
-    var data = {
-      term: $('#term').val(),
-      code: $('#code').val(),
-      source: $('#source').val(),
-      start: $('#start').val(),
-      match: $('#match').val(),
-      destination: $('#destination').val(),
-    }
-    httpPostProxy(data); //TODO change to the httpPost
+    var data = getSearchData;
+    httpPost(data); //TODO change to the httpPost
     event.preventDefault();
   })
 }
@@ -48,16 +52,15 @@ function sideBarSearch(){
     var value = $(this).val();
     if (event.keyCode == "13" && value !== "") {
       ajaxLoarder();
-      httpPostProxy({term: value}); //TODO change to the real httpPost
+      httpPost({term: value, code: "", source:"er", start: "er", match: "er", destination: "er"});
       return false;
     }
   });
 }
 
-function httpGet(apiEndPoint, isConcept, callback){
-  var base = isConcept ? conceptsBase : schemaBase;
+function httpGet(apiEndPoint, callback){
   $.ajax({
-    url: base + '/mocks/'+apiEndPoint+'.json', // to change when live
+    url: base + apiEndPoint, // to change when live
     dataType: 'JSON',
     success: callback
   });
@@ -75,18 +78,21 @@ function getProject (projectHashName) {
   // check if expList ul has li elments already, if it does, no need to make http calls
   if ($(projectHashName).find('.expList').has('li').length) return false
 
-  return httpGet(projectName, false, function(data){
+  return httpGet(projectName + '/schemes', false, function(data){
     data.schemes.forEach(function(obj, index){
       $(projectHashName)
         .find('.expList')
         .append("<li class='scheme'>"+obj.subjects+"<ul class='hide' id='"+obj.title+"'></ul></li>")
-      httpGet(obj.title, true, function(children){
+
+      var childApi = projectName +"/childconcepts?parent=http://joinedupdata.org/"+projectName+"/"+ obj.title
+
+      httpGet(childApi, function(children){
         children.forEach(function(child){
           var childId = child.prefLabel.split(" ")[0];
           $('#'+ obj.title)
           .append("<li class='child'><a href='"+child.uri+"'>"+child.prefLabel+"</a><ul class='hide' id='"+childId+"'></ul></li>")
-          var url = obj.title+ "/" + child.prefLabel;
-          httpGet(obj.title, true, function(grandChildren) {
+          var grandChildApi = childApi + "/" + child.prefLabel;
+          httpGet(grandChildApi, function(grandChildren) {
             grandChildren.forEach(function(grandChild){
               $('#' + childId)
               .append("<li class='child'><a href='"+grandChild.uri+"'>"+grandChild.prefLabel+"</a></li>")
@@ -116,11 +122,9 @@ function searchTipsHover () {
   ];
   $(elms.join(','))
   .hover(function(){
-    console.log("mouse enter");
     $(this).find('.hide-hover').animate({opacity: 1}, 500);
   }, function(){
     $(this).find('.hide-hover').animate({opacity: 0}, 250);
-    console.log('mouse leave')
   });
 }
 
@@ -173,7 +177,7 @@ function accordionResults(){
 }
 
 function httpPostProxy(data){
-  var dataurl = schemaBase + '/mocks/education.json';
+  var dataurl = base + '/mocks/education.json';
   console.log('dataurl', dataurl);
   $.ajax({
     url: dataurl,

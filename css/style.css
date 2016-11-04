@@ -1084,3 +1084,241 @@ color: red;
   text-align: center;
   padding-top: 1em;
 }
+
+/*new styles*/
+#wrapper{
+	font-size: 14px;
+  width: 80%
+}
+.tabs {
+	border: 1px solid #E4E4E4;
+	background-color: #FFFFFF;
+	width: 80%;
+	margin-left: 5%;
+}
+.panel-tab {
+	padding: 2em
+}
+.panel-tab p {
+	line-height: 2
+}
+.sidebar-left{
+	background-color: #FFFFFF;
+	font-size: 14px;
+	border: 1px solid #E4E4E4;
+	border-radius: 1px;
+  width:20%;
+  padding-left: 2em;
+}
+.sidebar-left p {padding-left: 0.8em;}
+.sidebar-left h4 { padding-bottom: 0.25em; padding-top: 0.25em}
+row{
+width:100%;
+margin:5px 0;
+clear:both;
+}
+
+.SearchContainer{
+	background-color:#FFFFFF;
+	margin-left:0;
+  padding:6px 0px;
+	cursor:pointer;
+  margin: 0 auto;
+	position:relative;
+}
+.column-left{ float: left; width: 50%; }
+.column-right{ float: right; width: 50%; }
+#translator form {margin-left: 20%}
+.hide-hover {padding-bottom: 1em; opacity:0}
+.column {clear: both; width: 100%; padding-top: 1.5em}
+.column select {margin-left: 31%}
+.column h4 {text-align: center; padding-bottom: 1em; padding-top: 1em;}
+.simple-center {margin-top: 1em; margin-bottom: 2em}
+input[type=text]:disabled {
+    background: #dddddd;
+}
+.box-new{
+	background-color:#1B365D;
+	border: 2px solid #E4E4E4;
+	width: 99.7%;
+	text-align: center;
+	color:white;
+	font-weight: 600;
+	font-size: 18px;
+	}
+h1{
+	color: #BA0C2F;
+}
+h2 {
+	color: #666666;
+}
+h3 {
+	color: #000000;
+}
+a:link {
+    color: #515151;
+    text-decoration: none;
+}
+/* visited link */
+a:visited {
+    color: #515151;
+}
+/* mouse over link */
+a:hover {
+    color: #BA0C2F;
+}
+/* selected link */
+a:active {
+    color: #BA0C2F;
+}
+input[type=submit]{
+  border:none;
+  font-size: 14px;
+  line-height: 12px;
+  background-color: #BA0C2F;
+  padding: 16px 24px;
+  border-radius: 6px;
+  box-shadow:0;
+  cursor: pointer;
+  font-weight: 500;
+}
+input[type=submit].active,input[type=submit]:hover {
+    background-color: #999999;
+}
+/*
+----- Accordion ----- Style the buttons that are used to open and close the accordion
+ */
+
+SearchAutoCompleteInput{
+   padding: 6px 10px;
+ }
+
+button.accordion {
+	background-color: #eaeaea;
+	color: #4c4c4c;
+	cursor: pointer;
+	padding: 16px 24px;
+	width: 90%;
+	border: solid 1px;
+	text-align: left;
+	outline: none;
+	font-size: 14px;
+	transition: 0.4s;
+	font-weight: 400;
+	border-radius: 6px;
+}
+button.accordion.active,
+button.accordion:hover {
+	background-color: #BA0C2F;
+	color:white;
+}
+button.accordion:after {
+	content: '\2228';
+	font-size: 13px;
+	color: #BA0C2F;
+	float: right;
+	margin-left: 5px;
+	font-weight: bold;
+}
+button.accordion.active:after {
+	content: "\2227";
+	color: white;
+	font-weight: bold;
+}
+.panel {
+	padding: 0 18px;
+	background-color: white;
+	max-height: 0;
+	overflow: hidden;
+	transition: 0.6s ease-in-out;
+	opacity: 0;
+	text-align: left;
+	font-size: 13px;
+}
+.panel.show {
+	opacity: 1;
+	max-height: 500px;
+}
+.panel.hide {
+	opacity: 0;
+	height: 0;
+}
+
+/*Exapandable list for projects*/
+.listContainer{
+  margin-top:25px;
+}
+.expList ul, li {
+    list-style: none;
+    margin:0;
+    padding:0;
+    padding-right: 30px;
+}
+.expList p {
+    margin:0;
+    display:block;
+}
+.expList li {
+    line-height:140%;
+    text-indent:0px;
+    background-position: 1px 8px;
+    padding-left: 20px;
+    background-repeat: no-repeat;
+}
+.expList .collapsed {
+    background-image: url("frontendroot?fileName=default/images/collapsed.png");
+}
+.expList p:hover {
+    background-color:#121212;
+}
+.expList .expanded {
+    background-image: url("frontendroot?fileName=default/images/expanded.png");
+}
+.listControl{
+  margin-bottom: 15px;
+}
+.listControl a {
+    color: #BA0C2F;
+    font-weight: 800;
+    color: #555555;
+    cursor: pointer;
+    height: 1.5em;
+    line-height: 1.5em;
+    margin-right: 5px;
+    padding:6px 10px;
+    float: right;
+}
+.listControl a:hover {
+    color:#BA0C2F;
+}
+input[type="text"] {
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 14px;
+    background-color: white;
+    padding: 2px 2px 2px 4px;
+}
+.sidebar-left input[type="text"] {
+    background-image: url("frontendroot?fileName=default/images/lupe.gif");
+    background-position: 7px;
+		background-repeat: no-repeat;
+    padding: 2px 2px 2px 4px;
+}
+.container-server, .flex-container{
+	padding-bottom: 5em;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.col-flx-1 {
+	width: 50%
+}
+.col-flx-2 {
+	width: 50;
+}
+.col-flx-0 {
+	width: 100%
+}
