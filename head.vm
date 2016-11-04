@@ -162,7 +162,12 @@
   <div class="header">
     <div class="banner"></div>
     <div class="vignet"></div>
-    <div class ="header-title"><h1>Joined-up Data Standards</h1></div>
+    <div class ="header-title">
+      <h2>
+        <a href="http://juds.joinedupdata.org" style="color:white">JUDS</a>
+      </h2>
+      <h1>Joined-up Data Standards</h1>
+    </div>
   </div>
   <div id="container">
     <div id="header" class="hide">

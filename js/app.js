@@ -5,7 +5,7 @@ function init(){
   if (location.pathname === '/') {
     console.log('we are in our simple SPA')
     if(location.hash) getProject(location.hash);
-    //search();
+    search();
     window.addEventListener("hashchange", hashListener);
   } else {
     // reset to default values
@@ -18,32 +18,40 @@ function init(){
 function ajaxLoarder(){
   location.hash = "#results";
 }
+
 function search() {
   searchToggleOptions();
   accordionResults();
+  searchTipsHover();
+  sideBarSearch();
   $('#submit').click(function(event){
-    // ajaxLoarder();
+    ajaxLoarder();
     var data = {
-      term: $('#term').val() || '',
-      code: $('#code').val() || '',
-      source: $('#source').val() || '',
-      start: $('#start').val() || '',
-      match: $('#match').val() || '',
-      destination: $('#destination').val() || '',
+      term: $('#term').val(),
+      code: $('#code').val(),
+      source: $('#source').val(),
+      start: $('#start').val(),
+      match: $('#match').val(),
+      destination: $('#destination').val(),
     }
-    httpPost(data);
+    httpPostProxy(data); //TODO change to the httpPost
     event.preventDefault();
   })
 }
 
 function sideBarSearch(){
-  $("#SearchAutoCompleteInput").clearField().bind(($.browser.opera ? "keypress" : "keydown"), function(event) {
+  $("#SearchInput")
+  .focus(function(){
+    $(this).css("background", "none")
+  })
+  .bind(($.browser.opera ? "keypress" : "keydown"), function(event) {
     var value = $(this).val();
-    // ajaxLoarder();
     if (event.keyCode == "13" && value !== "") {
-      httpPost({term: value});
+      ajaxLoarder();
+      httpPostProxy({term: value}); //TODO change to the real httpPost
       return false;
     }
+  });
 }
 
 function httpGet(apiEndPoint, isConcept, callback){
@@ -63,7 +71,7 @@ function getProject (projectHashName) {
   $(projectHashName).show();
   var projectName = projectHashName.replace(/^\#/, '');
   // this is the default no need to make any http call
-  if (projectName === 'home' || projectName === 'translator') return false
+  if (projectName === 'home' || projectName === 'translator' || projectName === 'results') return false
   // check if expList ul has li elments already, if it does, no need to make http calls
   if ($(projectHashName).find('.expList').has('li').length) return false
 
@@ -71,11 +79,19 @@ function getProject (projectHashName) {
     data.schemes.forEach(function(obj, index){
       $(projectHashName)
         .find('.expList')
-        .append("<li class='scheme'>"+obj.title+"<ul class='hide' id='"+obj.title+"'></ul></li>")
+        .append("<li class='scheme'>"+obj.subjects+"<ul class='hide' id='"+obj.title+"'></ul></li>")
       httpGet(obj.title, true, function(children){
         children.forEach(function(child){
+          var childId = child.prefLabel.split(" ")[0];
           $('#'+ obj.title)
-          .append("<li class='child'><a href='"+child.uri+"'>"+child.prefLabel+"</a></li>")
+          .append("<li class='child'><a href='"+child.uri+"'>"+child.prefLabel+"</a><ul class='hide' id='"+childId+"'></ul></li>")
+          var url = obj.title+ "/" + child.prefLabel;
+          httpGet(obj.title, true, function(grandChildren) {
+            grandChildren.forEach(function(grandChild){
+              $('#' + childId)
+              .append("<li class='child'><a href='"+grandChild.uri+"'>"+grandChild.prefLabel+"</a></li>")
+            })
+          })
         });
         // attach events after adding all the dom nodes
         if(index === (data.schemes.length - 1))prepareList(projectName);
@@ -87,6 +103,25 @@ function getProject (projectHashName) {
 function hashListener (){
   var hash = location.hash;
   getProject(hash);
+}
+
+function searchTipsHover () {
+  var elms = [
+    "#translator .column-left",
+    "#translator .column",
+    "#translator .column-right",
+    "#translator .col-flx-1",
+    "#translator .col-flx-2",
+    "#translator .col-flx-0"
+  ];
+  $(elms.join(','))
+  .hover(function(){
+    console.log("mouse enter");
+    $(this).find('.hide-hover').animate({opacity: 1}, 500);
+  }, function(){
+    $(this).find('.hide-hover').animate({opacity: 0}, 250);
+    console.log('mouse leave')
+  });
 }
 
 function searchToggleOptions(){
@@ -103,14 +138,16 @@ function searchToggleOptions(){
        }
     }
 }
+
 function results(data){
   // change to results tab
-  $('#results-no b').html('Simple search results ' + data.no);
-  //remove existing elements
-  $('#results').html("");
+  $('#search-results-no b').html('Simple search results ' + data.no);
+  // //remove existing elements
+  $('#search-results').html("");
   $('#trans').html(" ");
+
   data['Links_and_Matches'].forEach(function(link){
-    $('#results').append("<li style='font-size:1.2em'><a href="+link[0]+">"+link[1]+"</a></li>")
+    $('#search-results').append("<li style='font-size:1.2em'><a href="+link[0]+">"+link[1]+"</a></li>")
   });
   $('#trans-no b').html('Optional: translations ' + data.no2);
   data.trans.forEach(function(link){
@@ -135,9 +172,22 @@ function accordionResults(){
 	}
 }
 
+function httpPostProxy(data){
+  var dataurl = schemaBase + '/mocks/education.json';
+  console.log('dataurl', dataurl);
+  $.ajax({
+    url: dataurl,
+    dataType: 'JSON',
+    success: function(data){
+      console.log('proxy data', data);
+      results(data);
+    }
+  });
+}
+
 function httpPost(data){
   $.ajax({
-    type: "POST",
+    type: 'POST',
     url: 'http://localhost:5000/translator',
     data: data,
     success: function(data){
@@ -174,4 +224,6 @@ function prepareList(currentProject) {
     })
 };
 
-init();
+$(document).ready(function(){
+  init();
+})

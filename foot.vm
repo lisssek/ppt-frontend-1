@@ -2,8 +2,6 @@
 #if( $projectId )
     </div>  <!-- content_wrapper -->
 #end
-    <div id="footer">
-    </div>
   </div>    <!-- container -->
   <footer class = "footer">
     <div class="social">
