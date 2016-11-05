@@ -78,7 +78,7 @@ function getProject (projectHashName) {
   // check if expList ul has li elments already, if it does, no need to make http calls
   if ($(projectHashName).find('.expList').has('li').length) return false
 
-  return httpGet(projectName + '/schemes', false, function(data){
+  return httpGet(projectName + '/schemes', function(data){
     data.schemes.forEach(function(obj, index){
       $(projectHashName)
         .find('.expList')
