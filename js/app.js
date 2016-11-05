@@ -16,6 +16,7 @@ function init(){
 
 
 function ajaxLoarder(){
+  // add ajax loading gif
   location.hash = "#results";
 }
 
