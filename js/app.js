@@ -197,7 +197,7 @@ function httpPostProxy(data){
 function httpPost(data){
   $.ajax({
     type: 'POST',
-    url: 'http://localhost:5000/translator',
+    url: 'http://localhost:8000/translator',
     data: data,
     success: function(data){
       $("#loader").hide();
