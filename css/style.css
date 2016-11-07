@@ -1322,3 +1322,10 @@ input[type="text"] {
 .col-flx-0 {
 	width: 100%
 }
+.loader {
+  background-image: url("frontendroot?fileName=default/images/loader.gif");
+  background-repeat: no-repeat;
+  width: 10px;
+  margin-left: 10%;
+  padding: 5em;
+}

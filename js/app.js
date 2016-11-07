@@ -18,6 +18,7 @@ function init(){
 function ajaxLoarder(){
   // add ajax loading gif
   location.hash = "#results";
+  $('.accordion').hide();
   $("#loader").show();
 }
 
@@ -186,6 +187,8 @@ function httpPostProxy(data){
     dataType: 'JSON',
     success: function(data){
       console.log('proxy data', data);
+      $("#loader").hide();
+      $(".accordion").show();
       results(data);
     }
   });
@@ -198,6 +201,7 @@ function httpPost(data){
     data: data,
     success: function(data){
       $("#loader").hide();
+      $(".accordion").show();
       results(data);
     },
     dataType: 'JSON'
