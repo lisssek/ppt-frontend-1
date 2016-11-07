@@ -273,6 +273,7 @@
   <div class = "hide tabs" id = "results">
     <div class="box-new" style="background-color: #EA7600"> Results	</div>
     <div class = "panel-tab">
+    <center><div id = "loader" class="loader" style= "padding : 5em"></div></center>
     <button class="accordion" id= "search-results-no"><b></b></button>
     <div class="panel" style="text-align:left; overflow: auto">
       <ul style="list-style-type:none" id= "search-results">

@@ -18,6 +18,7 @@ function init(){
 function ajaxLoarder(){
   // add ajax loading gif
   location.hash = "#results";
+  $("#loader").show();
 }
 
 function getSearchData (){
@@ -196,6 +197,7 @@ function httpPost(data){
     url: 'http://localhost:5000/translator',
     data: data,
     success: function(data){
+      $("#loader").hide();
       results(data);
     },
     dataType: 'JSON'
