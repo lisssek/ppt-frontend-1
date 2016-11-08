@@ -23,7 +23,7 @@
       <h4>Browse projects</h4>
       <p><a href="#Indicators"  class="tab-nav">Indicators</a></p>
       <p><a href="#Sectors" class= "tab-nav">Sectors</a></p>
-      <p><a href="#Supranational_regions_and_groupings" class= "tab-nav">Supranational regions and &nbsp groupings</a></p>
+      <p><a href="#geo-pol" class= "tab-nav">Supranational regions and &nbsp groupings</a></p>
       <p><a href="#Surveys" class= "tab-nav">Surveys</a></p>
       <h4>List of data standard</h4>
       <p><a href="#data_standards_index" class= "tab-nav">Alphabetical list</a></p>
@@ -122,7 +122,7 @@
     </div>
   </div>
 
-  <div class= "hide tabs" id = "Supranational_regions_and_groupings">
+  <div class= "hide tabs" id = "geo-pol">
     <div class="box-new">Supranational regions and groupings</div>
     <div class = "panel-tab">
       <p>
@@ -193,7 +193,7 @@
         <b>*</b> Data standards are grouped into projects.
           Currently we have four projects: "indicators" (the list of corresponding data standards is available <b><a href="http://joinedupdata.org/#data_standards_index">here</a></b>),
           "sectors" (the list of corresponding data standards is available <b><a href="http://joinedupdata.org/#Indicators">here</a></b>),
-          "supranational regions and groupings" (the list of corresponding data standards is available <b><a href="http://joinedupdata.org/#Supranational_regions_and_groupings">here</a></b>),
+          "supranational regions and groupings" (the list of corresponding data standards is available <b><a href="http://joinedupdata.org/#geo-pol">here</a></b>),
           and "surveys" (the list of corresponding data standards is available <b><a href=http://joinedupdata.org/#Surveys">here</a></b>).
       </p>
     </div>
