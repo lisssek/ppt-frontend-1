@@ -82,7 +82,7 @@ function getProject (projectHashName) {
   if ($(projectHashName).find('.expList').has('li').length) return false
 
   return httpGet(projectName + '/schemes', function(data){
-    data.schemes.forEach(function(obj, index){
+    data.forEach(function(obj, index){
       $(projectHashName)
         .find('.expList')
         .append("<li class='scheme'>"+obj.subjects+"<ul class='hide' id='"+obj.title+"'></ul></li>")
@@ -197,7 +197,7 @@ function httpPostProxy(data){
 function httpPost(data){
   $.ajax({
     type: 'POST',
-    url: 'http://localhost:8000/translator',
+    url: 'http://joinedupdata.org:8000/translator',
     data: data,
     success: function(data){
       $("#loader").hide();
