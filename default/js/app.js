@@ -103,7 +103,7 @@ function getProject (projectHashName) {
           })
         });
         // attach events after adding all the dom nodes
-        if(index === (data.schemes.length - 1))prepareList(projectName);
+        if(index === (data.length - 1))prepareList(projectName);
       });
     });
   });
