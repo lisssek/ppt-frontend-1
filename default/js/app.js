@@ -38,7 +38,7 @@ function search() {
   accordionResults();
   searchTipsHover();
   sideBarSearch();
-  $('#submit').click(function(event){
+  $('.search-submit').click(function(event){
     ajaxLoarder();
     var data = getSearchData;
     httpPost(data); //TODO change to the httpPost
