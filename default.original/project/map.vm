@@ -1,0 +1,30 @@
+#parse("default/conf.vm")
+#set($bodyClass = "resource")
+#parse("default/head.vm")
+
+  <script type="text/javascript" src="#frontendLink('default/map/OpenLayers.js')"></script>
+  <script type="text/javascript" src="#frontendLink('default/map/OpenStreetMap.js')"></script>
+  <script type="text/javascript">
+  <!--
+    var map, markers;
+    
+    $(document).ready(function() {
+      addMap();
+      map.setCenter(transform($mapProjectLon, $mapProjectLat), $mapProjectZoom);
+      addMarkers("#frontendLink($mapDefaultMarker)");
+    });
+  //-->
+  </script>
+
+<div id="resources">
+#foreach ($currentLang in $availableLanguages)
+  #set($lang=$currentLang.label)
+  #foreach($prefLabel in $data.default.get($SKOS_PREFLABEL))
+    #if($lang == $prefLabel.language)
+      <h1>$prefLabel.label</h1>
+    #end
+  #end
+#end
+  <div id="map" style="height:512px"></div>
+</div>
+#parse("default/foot.vm")

@@ -1,0 +1,22 @@
+#parse("default/conf.vm")
+#set($serverView = false)
+#set($projectTabs = [
+  {"id":"lithology","name":"Lithologie"},
+  {"id":"GeologicUnit","name":"Geologische Einheiten"},
+  {"id":"tectonicunit","name":"Lithotektonische Einheiten"},
+  {"id":"structure","name":"Geologische Strukturen"},
+  {"id":"GeologicTimeScale","name":"Geologische Zeitskala"}
+])
+#set($showLanguageSelector = false)
+#parse("default/head.vm")
+
+<div class="yui-content">
+  <div id="tab0">
+    <div id="resources not-found">
+	  <h2>Nicht gefunden</h2>
+	  <p>Dieser Begriff wurde im Thesaurus nicht gefunden!</p>
+    </div>
+  </div>
+</div>
+
+#parse("default/foot.vm")

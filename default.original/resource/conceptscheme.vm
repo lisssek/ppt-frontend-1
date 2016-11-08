@@ -1,0 +1,74 @@
+<div id="resources">
+#foreach($currentLanguage in $availableLanguages)
+  #set($lang = $currentLanguage.label)
+  <div id="$lang" #if(!$lang.equals($defaultLanguage)) style="display:none;" #end class="resource ${lang}" about="$resource">
+    #set($titles = $data.default.get($DCTERMS_TITLE))
+    #foreach($title in $titles)
+      #if($lang == $title.language)
+        <h1 class="title"><a href="$resource">$title.label</a></h1>
+        <a href="$URI">$URI</a>
+      #end
+    #end
+  <ul class="default">
+    #set($subjects = $data.default.get($DCTERMS_SUBJECT))
+    #foreach($subject in $subjects)
+      #if($lang == $subject.language)
+      <li class="box">
+        <h2><a href="$DCTERMS_SUBJECT">$labels.get($DCTERMS_SUBJECT)</a></h2>
+	    <ul><li>$subject.label</li></ul> 
+      </li>
+      #end
+    #end
+    #set($description = $data.default.get($DCTERMS_DESCRIPTION))
+    #foreach($description in $description)
+      #if($lang == $description.language)
+      <li class="box">
+        <h2><a href="$DCTERMS_DESCRIPTION">$labels.get($DCTERMS_DESCRIPTION)</a></h2>
+	    <ul><li>$description.label</li></ul>
+      </li>
+      #end
+    #end
+  <li class="box">
+     <h2><a href="$SKOS_HASTOPCONCEPT">$labels.getString($SKOS_HASTOPCONCEPT)</a></h2>
+         <ul>
+           #set($topConcepts = $tools.format.sortAlphabetically($data.default.get($SKOS_HASTOPCONCEPT), $entityLabels, $lang))
+    	   #foreach($topConcept in $topConcepts)
+            
+      	      #foreach($label in $associatedLabels.get($topConcept))
+        	 #if($lang == $label.language)
+                    <li><a href="$topConcept">$label.label</a></li>
+        	 #end
+      	      #end
+    	   #end
+         </ul>
+  </li>
+
+    #if("$!project.get($DCTERMS_CREATOR).get(0)" != "")
+      <li class="box">
+	<h2><a href="$DCTERMS_CREATOR">$labels.get($DCTERMS_CREATOR)</a></h2>
+	<ul><li>$project.get($DCTERMS_CREATOR).get(0).label</li></ul>
+      </li>
+    #end
+    #if("$!project.get($DCTERMS_PUBLISHER).get(0)" != "")
+      <li class="box">
+	<h2><a href="$DCTERMS_PUBLISHER">$labels.getString($DCTERMS_PUBLISHER)</a></h2>
+        <ul><li>$project.get($DCTERMS_PUBLISHER).get(0).label</li></ul>
+      </li>
+    #end
+    #if("$!project.get($DCTERMS_CONTRIBUTOR).get(0)" != "")
+        <li class="box">
+	  <h2><a href="$DCTERMS_CONTRIBUTOR">$labels.getString($DCTERMS_CONTRIBUTOR)</a></h2>
+	    <ul><li>$project.get($DCTERMS_CONTRIBUTOR).get(0).label</li></ul>
+	</li>
+    #end
+    #if("$!project.get($DCTERMS_LICENSE).get(0)" != "")
+        <li class="box">
+	  <h2><a href="$DCTERMS_LICENSE">$labels.getString($DCTERMS_LICENSE)</a></h2>
+	  <ul><li>$project.get($DCTERMS_LICENSE).get(0).stringValue()</li></ul>
+	</li>
+    #end
+  </ul> ##Default
+  </div> ##Lang DIV
+  #end
+</div> ## Resources DIV
+
