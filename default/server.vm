@@ -197,7 +197,7 @@
           and "surveys" (the list of corresponding data standards is available <b><a href=http://joinedupdata.org/#Surveys">here</a></b>).
       </p>
     </div>
-    <center class="simple-center"><input value="Simple search" style="color:#FFFFFF" type="submit" id="submit"></center>
+    <center class="simple-center"><input value="Simple search" style="color:#FFFFFF" type="submit" class="submit"></center>
 
     <div class="box-new">Advanced filters</div>
       <div class = "flex-container">
