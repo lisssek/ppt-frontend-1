@@ -52,7 +52,7 @@
             SKOS not only provides a universal ‘language’ for defining relationships between concepts (terms) in a single taxonomy (vocabulary, thesaurus or classification scheme) but also a means of systematically comparing concepts in different taxonomies.
           </p>
           <p style="color: #933298">
-            <b>This thesaurus is continually expanding. We will clearly label the <a href="http://127.0.0.1:5000/data_standards_index" style="color: #black"><u> list of data standards </u></a> when they become available.</b>
+            <b>This thesaurus is continually expanding. We will clearly label the <a href="http://joinedupdata.org/#data_standards_index" style="color: #black"><u> list of data standards </u></a> when they become available.</b>
           </p>
           <p>
             <b>We are actively seeking to collaborate with experts interested in (or responsible for) the standards covered by our discussion papers.
@@ -191,10 +191,10 @@
       </select>
       <p class="hide-hover">
         <b>*</b> Data standards are grouped into projects.
-          Currently we have four projects: "indicators" (the list of corresponding data standards is available <b><a href="http://127.0.0.1:5000/projects_page1">here</a></b>),
-          "sectors" (the list of corresponding data standards is available <b><a href="http://127.0.0.1:5000/projects_page2">here</a></b>),
-          "supranational regions and groupings" (the list of corresponding data standards is available <b><a href="http://127.0.0.1:5000/projects_page3">here</a></b>),
-          and "surveys" (the list of corresponding data standards is available <b><a href="http://127.0.0.1:5000/projects_page4">here</a></b>).
+          Currently we have four projects: "indicators" (the list of corresponding data standards is available <b><a href="http://joinedupdata.org/#data_standards_index">here</a></b>),
+          "sectors" (the list of corresponding data standards is available <b><a href="http://joinedupdata.org/#Indicators">here</a></b>),
+          "supranational regions and groupings" (the list of corresponding data standards is available <b><a href="http://joinedupdata.org/#Supranational_regions_and_groupings">here</a></b>),
+          and "surveys" (the list of corresponding data standards is available <b><a href=http://joinedupdata.org/#Surveys">here</a></b>).
       </p>
     </div>
     <center class="simple-center"><input value="Simple search" style="color:#FFFFFF" type="submit" id="submit"></center>
@@ -223,7 +223,7 @@
     </div>
     <div class= "flex-container">
       <div class="col-flx-1">
-        <h4 class="hide-hover">(2) Choose <a href="http://127.0.0.1:5000/data_standards_index">data standard</a> you would like to translate from..</h4>
+        <h4 class="hide-hover">(2) Choose <a href="http://joinedupdata.org/#data_standards_index">data standard</a> you would like to translate from..</h4>
         <select name="start" id = "start">
           <option value="er">Any</option>
           <option value="cofog">COFOG</option>
@@ -240,7 +240,7 @@
         </select>
       </div>
       <div class="col-flx-2">
-        <h4 class="hide-hover">(3)..choose <a href="http://127.0.0.1:5000/data_standards_index">data standard</a> you would like to translate to!</h4>
+        <h4 class="hide-hover">(3)..choose <a href="http://joinedupdata.org/#data_standards_index">data standard</a> you would like to translate to!</h4>
         <h5></h5>
         <select name="destination" id= "destination">
           <option value="er">Any</option>
