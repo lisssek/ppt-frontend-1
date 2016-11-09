@@ -1,5 +1,5 @@
 
-var base = 'http://joinedupdata.org/PoolParty/api/thesaurus/';
+var base = 'http://allan_lukwago:allanlukwago@joinedupdata.org/PoolParty/api/thesaurus/';
 
 function init(){
   if (location.pathname === '/') {
