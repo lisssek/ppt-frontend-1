@@ -42,7 +42,7 @@ function search() {
   $('.search-submit').click(function(event){
     ajaxLoarder();
     var data = getSearchData;
-    httpPost(data); //TODO change to the httpPost
+    httpPost(data, false); //TODO change to the httpPost
     event.preventDefault();
   })
 }
@@ -56,7 +56,7 @@ function sideBarSearch(){
     var value = $(this).val();
     if (event.keyCode == "13" && value !== "") {
       ajaxLoarder();
-      httpPost({term: value, code: "", source:"er", start: "er", match: "er", destination: "er"});
+      httpPost({term: value, code: "", source:"er", start: "er", match: "er", destination: "er"}, true);
       return false;
     }
   });
@@ -101,8 +101,14 @@ function getProject (projectHashName) {
       $(projectHashName)
         .find('.expList')
         .append("<li class='scheme'><a href='"+obj.uri+"'>"+title+"</a><ul class='hide' id='"+obj.title+"'></ul></li>")
+      var slug = obj.title;
 
-      var childApi = projectName +"/childconcepts?parent=http://joinedupdata.org/"+projectName+"/"+ obj.title
+      if (projectName === 'geo-pol') {
+        var uriArr = obj.uri.split('/');
+        slug = uriArr[uriArr.length - 1];
+      }
+
+      var childApi = projectName +"/childconcepts?parent=http://joinedupdata.org/"+projectName+"/"+ slug
 
       httpGet(childApi, function(children){
         children.forEach(function(child){
@@ -175,15 +181,20 @@ function searchTipsHover () {
     "#translator .column-left",
     "#translator .column",
     "#translator .column-right",
-    "#translator .col-flx-1",
-    "#translator .col-flx-2",
-    "#translator .col-flx-0"
   ];
   $(elms.join(','))
   .hover(function(){
     $(this).find('.hide-hover').animate({opacity: 1}, 500);
   }, function(){
     $(this).find('.hide-hover').animate({opacity: 0}, 250);
+  });
+  // advanced hover
+  ['.advanced-hover-0', '.advanced-hover-1'].forEach(function(element, index){
+    $(element).hover(function(){
+      $('#advanced-tip-' + index).show().animate({opacity: 1}, 500);
+    }, function(){
+      $('#advanced-tip-' + index).hide().animate({opacity: 0}, 250);
+    });
   });
 }
 
@@ -236,14 +247,20 @@ function accordionResults(){
 }
 
 
-function httpPost(data){
+function httpPost(data, isSimpleSearch){
   $.ajax({
     type: 'POST',
     url: 'http://joinedupdata.org:8000/translator',
     data: data,
     success: function(data){
       $("#loader").hide();
-      $(".accordion").show();
+      if(isSimpleSearch){
+        $("#trans-no,#xml-download-no").hide();
+        $("#search-results-no").show();
+        $("#search-results-no").click();
+      } else {
+        $(".accordion").show();
+      }
       results(data);
     },
     dataType: 'JSON'

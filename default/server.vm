@@ -161,13 +161,13 @@
   <div class= "hide tabs" id = "translator">
     <div class="box-new">Search or translate</div>
     <div class = "panel-tab">
-    <p>
-    Welcome to Joined-up Data Standards search or translate engine.
-    This tool provides advanced options for searching relationships between data standards.
-    The <b>simple search</b> lets users find all concepts that contain a search term or code.
-    The <b>advanced filters</b>  allow for a "translation" between data standards.
-    By using advanced filters, it is possible to retrieve the exact relationships between data standards and filter a precise result.
-    </p>
+      <p>
+      Welcome to Joined-up Data Standards search or translate engine.
+      This tool provides advanced options for searching relationships between data standards.
+      The <b>simple search</b> lets users find all concepts that contain a search term or code.
+      The <b>advanced filters</b>  allow for a "translation" between data standards.
+      By using advanced filters, it is possible to retrieve the exact relationships between data standards and filter a precise result.
+      </p>
     <div class="column-left">
       <h4 style="color:#933298" class="hide-hover">You can either search using a term, such as "agriculture"...</h4>
       <form name="searchTerm">
@@ -182,13 +182,15 @@
     </div>
     <div class="column">
       <h4 style="text-align:center">Which project* would you like to search?</h4>
-      <select name="source" id= "source">
+      <p style="text-align:center">
+        <select name="source" id= "source">
         <option value="er">All</option>
         <option value="Indicators">indicators</option>
         <option value="Sectors">sectors</option>
         <option value="Surveys">surveys</option>
         <option value="geo-pol">supranational regions and groupings</option>
       </select>
+      </p>
       <p class="hide-hover">
         <b>*</b> Data standards are grouped into projects.
           Currently we have four projects: "indicators" (the list of corresponding data standards is available <b><a href="http://joinedupdata.org/#data_standards_index">here</a></b>),
@@ -200,9 +202,9 @@
     <center class="simple-center"><input value="Simple search" style="color:#FFFFFF" type="submit" class="submit search-submit"></center>
 
     <div class="box-new">Advanced filters</div>
-      <div class = "flex-container">
-        <div class="col-flx-1" style="padding-top: 1.5em">
-          <h4 styles="padding-bottom: 1em;">(1) What translation would you like to be returned?</h4>
+    <div class = "flex-container">
+        <div class="col-flx-1 advanced-hover-0" style="padding-top: 1.5em;">
+          <h4 style="padding-bottom: 1em;">(1) What translation would you like to be returned?</h4>
           <select name="match" id = "match">
             <option value="er">any</option>
             <option value="ANY">show me all matches</option>
@@ -212,8 +214,8 @@
             <option value="SKOS:Narrower">more specific to the search term/ narrower</option>
           </select>
         </div>
-        <div class="col-flx-2" style="padding-top: 1.5em; padding-left: 2.5em">
-            <p>
+        <div class="col-flx-2" style="padding-top: 1.5em; padding-left: 2%>">
+            <p id="advanced-tip-0" class="hide-hover">
             <b>1</b> You can discover different relationships to your search term/code.
             You can choose to view all the relationships to your search term/code or a specific one.
             We use <a href="https://www.w3.org/2004/02/skos/intro">Simple Knowledge Organisation System </a> (SKOS) to map data standards; a practical example of our mapping approach can be found
@@ -222,8 +224,8 @@
         </div>
     </div>
     <div class= "flex-container">
-      <div class="col-flx-1">
-        <h4 styles="padding-bottom: 1em;">(2) Choose <a href="http://joinedupdata.org/#data_standards_index">data standard</a> you would like to translate from..</h4>
+      <div class="col-flx-1 advanced-hover-1">
+        <h4 style="padding-bottom: 1em;">(2) Choose <a href="http://joinedupdata.org/#data_standards_index">data standard</a> you would like to translate from..</h4>
         <select name="start" id = "start">
           <option value="er">Any</option>
           <option value="cofog">COFOG</option>
@@ -240,7 +242,15 @@
         </select>
       </div>
       <div class="col-flx-2">
-        <h4 styles="padding-bottom: 1em;">(3)..choose <a href="http://joinedupdata.org/#data_standards_index">data standard</a> you would like to translate to!</h4>
+        <p class="hide-hover" id ="advanced-tip-1"  style="padding-left: 2%>">
+          <b>(2,3)</b> These options allow you to find direct translations between data standards.
+          You might want to search for a given code and ask to see its translation in a data standard of your interest.
+        </p>
+      </div>
+    </div>
+    <div class="flex-container">
+      <div class="col-flx-0 advanced-hover-1">
+        <h4 style="padding-bottom: 1em;">(3)..choose <a href="http://joinedupdata.org/#data_standards_index">data standard</a> you would like to translate to!</h4>
         <h5></h5>
         <select name="destination" id= "destination">
           <option value="er">Any</option>
@@ -260,18 +270,13 @@
     </div>
     <div class= "flex-container">
         <div class="col-flx-0">
-          <p class="hide-hover">
-            <b>(3,4)</b> These options allow you to find direct translations between data standards.
-            You might want to search for a given code and ask to see its translation in a data standard of your interest.
-          </p>
           <center><input value="Advanced search" style="color:#FFFFFF" type="submit" class = "submit search-submit"></center>
         </div>
       </div>
-  </div>
+    </div>
   </div>
 
   <div class = "hide tabs" id = "results">
-    <div class="box-new" style="background-color: #EA7600"> Results	</div>
     <div class = "panel-tab">
     <center><div id = "loader" class="loader"></div></center>
     <button class="accordion" id= "search-results-no"><b></b></button>
@@ -280,11 +285,11 @@
       </ul>
     </div>
     <button class="accordion" id="trans-no"><b></b></button>
-    <div id="trans" class="panel" style="text-align:left; overflow: auto">
-      <ul style="list-style-type:none">
+    <div class="panel" style="text-align:left; overflow: auto">
+      <ul style="list-style-type:none"  id="trans">
       </ul>
     </div>
-    <button class="accordion"><b>Download results RDF/XML</b></button>
+    <button class="accordion" id = "xml-download-no"><b>Download results RDF/XML</b></button>
     <div id="xml-download" class="panel" style="text-align:center; overflow: auto">
       <a href="#" style="color:black; font-size: 1.2em">
       <img src="frontendroot?fileName=default/images/favicon.ico" alt="favicon" style="width:12px;height:12px;border:0"> RDF/XML </a>

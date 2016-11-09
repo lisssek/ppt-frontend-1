@@ -1074,15 +1074,7 @@ color: red;
 .social a:hover{
   text-decoration: none;
 }
-.copyrights{
-  width: 100%;
-  background: black;
-  color: #999;
-}
-.copyrights a{
-  color: white;
 
-}
 .footer p{
   text-align: center;
   padding-top: 1em;
@@ -1103,7 +1095,8 @@ color: red;
 	padding: 2em
 }
 .panel-tab p {
-	line-height: 2
+	line-height: 2;
+  padding-bottom: 2em;
 }
 .sidebar-left{
  background-color: #FFFFFF;
@@ -1113,6 +1106,7 @@ color: red;
  width:20%;
  padding-left: 2em;
  max-height: 41em;
+ padding-bottom: 1em;
 }
 .sidebar-left p {padding-left: 0.8em;}
 .sidebar-left h4 { padding-bottom: 0.25em; padding-top: 0.25em}
@@ -1134,8 +1128,8 @@ clear:both;
 .column-right{ float: right; width: 50%; }
 #translator form {margin-left: 20%}
 .hide-hover {padding-bottom: 1em; opacity:0}
+#translator .hide-hover {display: none}
 .column {clear: both; width: 100%; padding-top: 1.5em}
-.column select {margin-left: 31%}
 .column h4 {text-align: center; padding-bottom: 1em; padding-top: 1em;}
 .simple-center {margin-top: 1em; margin-bottom: 2em}
 input[type=text]:disabled {
@@ -1201,8 +1195,8 @@ button.accordion {
 	background-color: #eaeaea;
 	color: #4c4c4c;
 	cursor: pointer;
-	padding: 16px 24px;
-	width: 90%;
+	padding: 11px 24px;
+	width: 100%;
 	border: solid 1px;
 	text-align: left;
 	outline: none;
@@ -1263,7 +1257,7 @@ button.accordion.active:after {
     display:block;
 }
 .expList li {
-    line-height:140%;
+    line-height: 190%;
     text-indent:0px;
     background-position: 1px 8px;
     padding-left: 20px;
@@ -1310,7 +1304,7 @@ input[type="text"] {
     padding: 2px 2px 2px 4px;
 }
 .container-server, .flex-container{
-	padding-bottom: 5em;
+	padding-bottom: 1em;
 	position: relative;
 	display: flex;
 	flex-direction: row;
@@ -1318,10 +1312,11 @@ input[type="text"] {
 }
 
 .col-flx-1 {
-	width: 50%
+	width: 50%;
+  height: 14em;
 }
 .col-flx-2 {
-	width: 50;
+	width: 50%;
 }
 .col-flx-0 {
 	width: 100%
@@ -1337,3 +1332,10 @@ input[type="text"] {
   position: relative;
   min-height: 100%;
 }
+.scheme a {font-weight: bold;}
+.copyrights{
+  width: 100%;
+  background: black;
+  color: #999;
+}
+.copyrights a{color: white;}
