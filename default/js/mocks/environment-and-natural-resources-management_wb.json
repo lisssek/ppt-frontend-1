@@ -1,0 +1,22 @@
+[ {
+  "uri" : "http://joinedupdata.org/Sectors/isic/mining-and-quarrying_isic",
+  "prefLabel" : "mining and quarrying_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/professional-scientific-and-technical-activities_isic",
+  "prefLabel" : "professional scientific and technical activities_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/public-administration-and-defence-compulsory-social-security_isic",
+  "prefLabel" : "public administration and defence compulsory social security_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/activities-of-extraterritorial-organizations-and-bodies_isic",
+  "prefLabel" : "activities of extraterritorial organizations and bodies_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/transportation-and-storage_isic",
+  "prefLabel" : "transportation and storage_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/construction_isic",
+  "prefLabel" : "construction_isic"
+}, {
+  "uri" : "http://joinedupdata.org/Sectors/isic/arts-entertainment-and-recreation_isic",
+  "prefLabel" : "arts entertainment and recreation_isic"
+}]

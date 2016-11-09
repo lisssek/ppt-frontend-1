@@ -1032,7 +1032,7 @@ color: red;
 }
 .header-title h1 {
   display: inline-block;
-  width: 67%;
+  width: 70%;
   margin: 0 auto;
   text-align: center;
   color: white;
@@ -1339,3 +1339,5 @@ input[type="text"] {
   color: #999;
 }
 .copyrights a{color: white;}
+.conceptBtn{width: 1em;height: 1em;background-repeat: no-repeat;border: none;background-color: white;}
+.show{display: block}

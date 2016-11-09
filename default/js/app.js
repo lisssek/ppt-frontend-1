@@ -100,28 +100,22 @@ function getProject (projectHashName) {
       var title = themeTitle(obj)
       $(projectHashName)
         .find('.expList')
-        .append("<li class='scheme'><a href='"+obj.uri+"'>"+title+"</a><ul class='hide' id='"+obj.title+"'></ul></li>")
-      var slug = obj.title;
+        .append("<li class='scheme'><button class='conceptBtn collapsed'></button><a target='_blank' href='"+obj.uri+"' target='_blank'>"+title+"</a><ul class='hide' id='"+obj.title+"'></ul></li>")
 
-      if (projectName === 'geo-pol') {
-        var uriArr = obj.uri.split('/');
-        slug = uriArr[uriArr.length - 1];
-      }
+      var baseConceptsApi = projectName +"/childconcepts?parent=";
 
-      var childApi = projectName +"/childconcepts?parent=http://joinedupdata.org/"+projectName+"/"+ slug
-
-      httpGet(childApi, function(children){
+      httpGet(baseConceptsApi + obj.uri, function(children){
         children.forEach(function(child){
           var childId = child.prefLabel.split(" ")[0];
           $('#'+ obj.title)
-          .append("<li class='child'><a href='"+child.uri+"'>"+child.prefLabel+"</a><ul class='hide' id='"+childId+"'></ul></li>")
-          var grandChildApi = childApi + "/" + child.prefLabel;
-          httpGet(grandChildApi, function(grandChildren) {
+          .append("<li class='child'><button class='conceptBtn collapsed'></button><a target='_blank' href='"+child.uri+"'>"+child.prefLabel+"</a><ul class='hide' id='"+childId+"'></ul></li>")
+          httpGet(baseConceptsApi + child.uri, function(grandChildren) {
             grandChildren.forEach(function(grandChild){
               $('#' + childId)
-              .append("<li class='child'><a href='"+grandChild.uri+"'>"+grandChild.prefLabel+"</a></li>")
+              .append("<li class='child'><a target='_blank' href='"+grandChild.uri+"'>"+grandChild.prefLabel+"</a></li>")
             })
-          })
+          });
+
         });
         // attach events after adding all the dom nodes
         if(index === (data.length - 1))prepareList(projectName);
@@ -161,11 +155,11 @@ function standardsIndex(container){
     objKeys.sort().forEach(function(key){
       var items = alphabeticalObjects[key].map(function(item){
         var title = themeTitle(item)
-        return "<li class='child'><a href='"+item.uri+"'>"+title+"</a></li>";
+        return "<li class='child'><a target='_blank' href='"+item.uri+"'>"+title+"</a></li>";
       });
       $('#'+container)
         .find('.expList')
-        .append("<li class='scheme'>"+key+"<ul class='hide'>"+items.join("")+"</ul></li>")
+        .append("<li class='scheme'><button class='conceptBtn collapsed'></button>"+key+"<ul class='hide'>"+items.join("")+"</ul></li>")
     });
     prepareList(container);
   });
@@ -221,11 +215,11 @@ function results(data){
   $('#trans').html(" ");
 
   data['Links_and_Matches'].forEach(function(link){
-    $('#search-results').append("<li style='font-size:1.2em'><a href="+link[0]+">"+link[1]+"</a></li>")
+    $('#search-results').append("<li style='font-size:1.2em'><a target='_blank' href="+link[0]+">"+link[1]+"</a></li>")
   });
   $('#trans-no b').html('Optional: translations ' + data.no2);
   data.trans.forEach(function(link){
-    $('#trans').append("<li style='font-size:1.2em'><a href="+link[0]+">"+link[1]+"</a></li>")
+    $('#trans').append("<li style='font-size:1.2em'><a target='_blank' href="+link[0]+">"+link[1]+"</a></li>")
   });
   $('#xml-download a').prop('href', data.DownloadXML);
 }
@@ -268,29 +262,23 @@ function httpPost(data, isSimpleSearch){
 }
 
 function prepareList(currentProject) {
-    $('#'+currentProject+ ' .expList').find('li:has(ul)')
-    .unbind('click')
+    $('#'+currentProject+ ' .expList').find('.conceptBtn')
     .click( function(event) {
-        if (this == event.target) {
-            $(this).toggleClass('expanded');
-            $(this).children('ul').toggle('medium');
-        }
-        return false;
-    })
-    .addClass('collapsed')
-    .children('ul').hide();
+        $(this).parent().children('ul').toggleClass('show');
+        $(this).toggleClass('expanded')
+    });
 
     $('#'+currentProject+' .expandList')
-    .unbind('click')
     .click( function() {
-        $('.collapsed').addClass('expanded');
-        $('.collapsed').children().show('medium');
-    })
+        $('#'+currentProject+ ' .conceptBtn').removeClass('collapsed').addClass('expanded');
+        $('#'+currentProject+ ' .hide').removeClass('hide').addClass('show');
+    });
+
     $('#'+currentProject+ ' .collapseList')
     .unbind('click')
     .click( function() {
-      $('#'+currentProject+ ' .collapsed').removeClass('expanded');
-      $('#'+currentProject+ ' .collapsed').children().hide('medium');
+      $('#'+currentProject+ ' .conceptBtn').removeClass('expanded').addClass('collapsed');
+      $('#'+currentProject).find('.show').removeClass('show').addClass('hide');
     })
 };
 
