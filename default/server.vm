@@ -202,7 +202,7 @@
     <div class="box-new">Advanced filters</div>
       <div class = "flex-container">
         <div class="col-flx-1" style="padding-top: 1.5em">
-          <h4 style=" text-align:centre; " class="hide-hover">(1) What translation would you like to be returned?</h4>
+          <h4 styles="padding-bottom: 1em;">(1) What translation would you like to be returned?</h4>
           <select name="match" id = "match">
             <option value="er">any</option>
             <option value="ANY">show me all matches</option>
@@ -223,7 +223,7 @@
     </div>
     <div class= "flex-container">
       <div class="col-flx-1">
-        <h4 class="hide-hover">(2) Choose <a href="http://joinedupdata.org/#data_standards_index">data standard</a> you would like to translate from..</h4>
+        <h4 styles="padding-bottom: 1em;">(2) Choose <a href="http://joinedupdata.org/#data_standards_index">data standard</a> you would like to translate from..</h4>
         <select name="start" id = "start">
           <option value="er">Any</option>
           <option value="cofog">COFOG</option>
@@ -240,7 +240,7 @@
         </select>
       </div>
       <div class="col-flx-2">
-        <h4 class="hide-hover">(3)..choose <a href="http://joinedupdata.org/#data_standards_index">data standard</a> you would like to translate to!</h4>
+        <h4 styles="padding-bottom: 1em;">(3)..choose <a href="http://joinedupdata.org/#data_standards_index">data standard</a> you would like to translate to!</h4>
         <h5></h5>
         <select name="destination" id= "destination">
           <option value="er">Any</option>
