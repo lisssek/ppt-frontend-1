@@ -1,0 +1,685 @@
+{
+  "DownloadXML": "http://joinedupdata.org/PoolParty/sparql/Indicators?query=PREFIX+skos%3A%3Chttp%3A//www.w3.org/2004/02/skos/core%23%3E%0ASELECT+DISTINCT+%3FConcept+%0AWHERE%7B%3FConcept+%3Fx+skos%3AConcept%7B%3FConcept+skos%3AprefLabel+%3FprefLabel+.+FILTER+%28regex%28str%28%3FprefLabel%29%2C+%27education%27%2C+%27i%27%29%29+%7D%0A%7DORDER+BY+%3FprefLabel+LIMIT+500+OFFSET+0&output=xml&results=xml&format=xml",
+  "Links_and_Matches": [
+    [
+      " http://joinedupdata.org/Sectors/ntee/adult-education_ntee",
+      "Original search term: http://joinedupdata.org/Sectors/ntee/adult-education_ntee"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/world_bank_sectors/adult-literacy-or-non-formal-education_wb",
+      "Original search term: http://joinedupdata.org/Sectors/world_bank_sectors/adult-literacy-or-non-formal-education_wb"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/crs/agricultural-education-or-training",
+      "Original search term: http://joinedupdata.org/Sectors/crs/agricultural-education-or-training"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/ntee/arts-education_ntee",
+      "Original search term: http://joinedupdata.org/Sectors/ntee/arts-education_ntee"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/crs/basic-education_2",
+      "Original search term: http://joinedupdata.org/Sectors/crs/basic-education_2"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/itep/basic-education-itep",
+      "Original search term: http://joinedupdata.org/Sectors/itep/basic-education-itep"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/isic/cultural-education_isic_8542",
+      "Original search term: http://joinedupdata.org/Sectors/isic/cultural-education_isic_8542"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/crs/early-childhood-education_2",
+      "Original search term: http://joinedupdata.org/Sectors/crs/early-childhood-education_2"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/crs/education_2",
+      "Original search term: http://joinedupdata.org/Sectors/crs/education_2"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/crs/education-and-training-in-transport-and-storage",
+      "Original search term: http://joinedupdata.org/Sectors/crs/education-and-training-in-transport-and-storage"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/crs/education-and-training-in-water-supply-and-sanitation",
+      "Original search term: http://joinedupdata.org/Sectors/crs/education-and-training-in-water-supply-and-sanitation"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/crs/education-facilities-and-training_2",
+      "Original search term: http://joinedupdata.org/Sectors/crs/education-facilities-and-training_2"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/world_bank_themes/education-for-all_wb",
+      "Original search term: http://joinedupdata.org/Sectors/world_bank_themes/education-for-all_wb"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/world_bank_themes/education-for-the-knowledge-economy_wb",
+      "Original search term: http://joinedupdata.org/Sectors/world_bank_themes/education-for-the-knowledge-economy_wb"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/crs/education-level-unspecified_2",
+      "Original search term: http://joinedupdata.org/Sectors/crs/education-level-unspecified_2"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/ntee/education-nec_ntee",
+      "Original search term: http://joinedupdata.org/Sectors/ntee/education-nec_ntee"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/cofog/education-not-definable-by-level",
+      "Original search term: http://joinedupdata.org/Sectors/cofog/education-not-definable-by-level"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/cofog/education-not-definable-by-level--is",
+      "Original search term: http://joinedupdata.org/Sectors/cofog/education-not-definable-by-level--is"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/crs/education-or-training-in-banking-and-financial-services",
+      "Original search term: http://joinedupdata.org/Sectors/crs/education-or-training-in-banking-and-financial-services"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/itep/education-other-itep",
+      "Original search term: http://joinedupdata.org/Sectors/itep/education-other-itep"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/crs/education-policy-and-administrative-management_2",
+      "Original search term: http://joinedupdata.org/Sectors/crs/education-policy-and-administrative-management_2"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/crs/education-secondary_2",
+      "Original search term: http://joinedupdata.org/Sectors/crs/education-secondary_2"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/cofog/education_cofog",
+      "Original search term: http://joinedupdata.org/Sectors/cofog/education_cofog"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/isic/education_isic",
+      "Original search term: http://joinedupdata.org/Sectors/isic/education_isic"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/isic/education_isic_85",
+      "Original search term: http://joinedupdata.org/Sectors/isic/education_isic_85"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/itep/education_itep",
+      "Original search term: http://joinedupdata.org/Sectors/itep/education_itep"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/ntee/education_ntee",
+      "Original search term: http://joinedupdata.org/Sectors/ntee/education_ntee"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/world_bank_sectors/education_wb",
+      "Original search term: http://joinedupdata.org/Sectors/world_bank_sectors/education_wb"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/crs/educational-research_2",
+      "Original search term: http://joinedupdata.org/Sectors/crs/educational-research_2"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/ntee/educational-services_ntee",
+      "Original search term: http://joinedupdata.org/Sectors/ntee/educational-services_ntee"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/isic/educational-support-activities_isic",
+      "Original search term: http://joinedupdata.org/Sectors/isic/educational-support-activities_isic"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/isic/educational-support-activities_isic_8550",
+      "Original search term: http://joinedupdata.org/Sectors/isic/educational-support-activities_isic_8550"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/crs/energy-education-or-training",
+      "Original search term: http://joinedupdata.org/Sectors/crs/energy-education-or-training"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/crs/environmental-education-or--training",
+      "Original search term: http://joinedupdata.org/Sectors/crs/environmental-education-or--training"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/ntee/environmental-education_ntee",
+      "Original search term: http://joinedupdata.org/Sectors/ntee/environmental-education_ntee"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/cofog/first-stage-of-tertiary-education--is",
+      "Original search term: http://joinedupdata.org/Sectors/cofog/first-stage-of-tertiary-education--is"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/crs/fishery-education-or-training",
+      "Original search term: http://joinedupdata.org/Sectors/crs/fishery-education-or-training"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/crs/forestry-education-or-training",
+      "Original search term: http://joinedupdata.org/Sectors/crs/forestry-education-or-training"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/world_bank_sectors/general-education-sector_wb",
+      "Original search term: http://joinedupdata.org/Sectors/world_bank_sectors/general-education-sector_wb"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/isic/general-secondary-education_isic_8521",
+      "Original search term: http://joinedupdata.org/Sectors/isic/general-secondary-education_isic_8521"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/crs/health-education-crs",
+      "Original search term: http://joinedupdata.org/Sectors/crs/health-education-crs"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/crs/higher-education_2",
+      "Original search term: http://joinedupdata.org/Sectors/crs/higher-education_2"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/isic/higher-education_isic",
+      "Original search term: http://joinedupdata.org/Sectors/isic/higher-education_isic"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/isic/higher-education_isic_8530",
+      "Original search term: http://joinedupdata.org/Sectors/isic/higher-education_isic_8530"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/ntee/higher-education_ntee",
+      "Original search term: http://joinedupdata.org/Sectors/ntee/higher-education_ntee"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/cofog/lower-secondary-education--is",
+      "Original search term: http://joinedupdata.org/Sectors/cofog/lower-secondary-education--is"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/crs/medical-education-or-training-crs",
+      "Original search term: http://joinedupdata.org/Sectors/crs/medical-education-or-training-crs"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/crs/multisector-education-or-training",
+      "Original search term: http://joinedupdata.org/Sectors/crs/multisector-education-or-training"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/isic/other-education-nec_isic_8549",
+      "Original search term: http://joinedupdata.org/Sectors/isic/other-education-nec_isic_8549"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/isic/other-education_isic",
+      "Original search term: http://joinedupdata.org/Sectors/isic/other-education_isic"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/cofog/post-secondary-non-tertiary-education",
+      "Original search term: http://joinedupdata.org/Sectors/cofog/post-secondary-non-tertiary-education"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/cofog/post-secondary-non-tertiary-education--is",
+      "Original search term: http://joinedupdata.org/Sectors/cofog/post-secondary-non-tertiary-education--is"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/crs/post-secondary-education_2",
+      "Original search term: http://joinedupdata.org/Sectors/crs/post-secondary-education_2"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/itep/postsecondary-education-itep",
+      "Original search term: http://joinedupdata.org/Sectors/itep/postsecondary-education-itep"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/cofog/pre-primary-and-primary-education",
+      "Original search term: http://joinedupdata.org/Sectors/cofog/pre-primary-and-primary-education"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/cofog/pre-primary-education--is",
+      "Original search term: http://joinedupdata.org/Sectors/cofog/pre-primary-education--is"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/world_bank_sectors/pre-primary-education_wb",
+      "Original search term: http://joinedupdata.org/Sectors/world_bank_sectors/pre-primary-education_wb"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/isic/preprimary-and-primary-education_isic",
+      "Original search term: http://joinedupdata.org/Sectors/isic/preprimary-and-primary-education_isic"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/isic/preprimary-and-primary-education_isic_8510",
+      "Original search term: http://joinedupdata.org/Sectors/isic/preprimary-and-primary-education_isic_8510"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/crs/primary-education_2",
+      "Original search term: http://joinedupdata.org/Sectors/crs/primary-education_2"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/cofog/primary-education--is",
+      "Original search term: http://joinedupdata.org/Sectors/cofog/primary-education--is"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/world_bank_sectors/primary-education_wb",
+      "Original search term: http://joinedupdata.org/Sectors/world_bank_sectors/primary-education_wb"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/cofog/r-and-d-education",
+      "Original search term: http://joinedupdata.org/Sectors/cofog/r-and-d-education"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/cofog/r-and-d-education--cs",
+      "Original search term: http://joinedupdata.org/Sectors/cofog/r-and-d-education--cs"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/isic/regulation-of-the-activities-of-providing-health-care-education-cultural-services-and-other-social-services-excluding-social-security_isic_8412",
+      "Original search term: http://joinedupdata.org/Sectors/isic/regulation-of-the-activities-of-providing-health-care-education-cultural-services-and-other-social-services-excluding-social-security_isic_8412"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/ntee/safety-education_ntee",
+      "Original search term: http://joinedupdata.org/Sectors/ntee/safety-education_ntee"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/cofog/second-stage-of-tertiary-education--is",
+      "Original search term: http://joinedupdata.org/Sectors/cofog/second-stage-of-tertiary-education--is"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/crs/secondary-education_2",
+      "Original search term: http://joinedupdata.org/Sectors/crs/secondary-education_2"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/itep/secondary-education-itep",
+      "Original search term: http://joinedupdata.org/Sectors/itep/secondary-education-itep"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/cofog/secondary-education_cofog",
+      "Original search term: http://joinedupdata.org/Sectors/cofog/secondary-education_cofog"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/isic/secondary-education_isic",
+      "Original search term: http://joinedupdata.org/Sectors/isic/secondary-education_isic"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/world_bank_sectors/secondary-education_wb",
+      "Original search term: http://joinedupdata.org/Sectors/world_bank_sectors/secondary-education_wb"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/ntee/special-education_ntee",
+      "Original search term: http://joinedupdata.org/Sectors/ntee/special-education_ntee"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/isic/sports-and-recreation-education_isic_8541",
+      "Original search term: http://joinedupdata.org/Sectors/isic/sports-and-recreation-education_isic_8541"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/cofog/subsidiary-services-to-education",
+      "Original search term: http://joinedupdata.org/Sectors/cofog/subsidiary-services-to-education"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/cofog/subsidiary-services-to-education--is",
+      "Original search term: http://joinedupdata.org/Sectors/cofog/subsidiary-services-to-education--is"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/isic/technical-and-vocational-secondary-education_isic_8522",
+      "Original search term: http://joinedupdata.org/Sectors/isic/technical-and-vocational-secondary-education_isic_8522"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/cofog/tertiary-education",
+      "Original search term: http://joinedupdata.org/Sectors/cofog/tertiary-education"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/world_bank_sectors/tertiary-education_wb",
+      "Original search term: http://joinedupdata.org/Sectors/world_bank_sectors/tertiary-education_wb"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/crs/trade-education-or-training",
+      "Original search term: http://joinedupdata.org/Sectors/crs/trade-education-or-training"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/cofog/upper-secondary-education--is",
+      "Original search term: http://joinedupdata.org/Sectors/cofog/upper-secondary-education--is"
+    ],
+    [
+      " http://joinedupdata.org/Sectors/ntee/voter-education-and-registration_ntee",
+      "Original search term: http://joinedupdata.org/Sectors/ntee/voter-education-and-registration_ntee"
+    ],
+    [
+      " http://joinedupdata.org/Surveys/additional-questions-education_lsms",
+      "Original search term: http://joinedupdata.org/Surveys/additional-questions-education_lsms"
+    ],
+    [
+      " http://joinedupdata.org/Surveys/does--name--attend-any-organized-learning-or-early-childhood-education-programme--such-as-a-private-or-government-facility--including-kindergarten-or-community-child-care_mics_u5",
+      "Original search term: http://joinedupdata.org/Surveys/does--name--attend-any-organized-learning-or-early-childhood-education-programme--such-as-a-private-or-government-facility--including-kindergarten-or-community-child-care_mics_u5"
+    ],
+    [
+      " http://joinedupdata.org/Surveys/education-in-last-12-months_lsms",
+      "Original search term: http://joinedupdata.org/Surveys/education-in-last-12-months_lsms"
+    ],
+    [
+      " http://joinedupdata.org/Surveys/education-survey_lsms",
+      "Original search term: http://joinedupdata.org/Surveys/education-survey_lsms"
+    ],
+    [
+      " http://joinedupdata.org/Surveys/education_hh_mics5",
+      "Original search term: http://joinedupdata.org/Surveys/education_hh_mics5"
+    ],
+    [
+      " http://joinedupdata.org/Surveys/question-left-blank-respondent-has-secondary-or-higher-education-_men_mics5",
+      "Original search term: http://joinedupdata.org/Surveys/question-left-blank-respondent-has-secondary-or-higher-education-_men_mics5"
+    ],
+    [
+      " http://joinedupdata.org/Surveys/question-left-blank-respondent-has-secondary-or-higher-education-_women_mics5",
+      "Original search term: http://joinedupdata.org/Surveys/question-left-blank-respondent-has-secondary-or-higher-education-_women_mics5"
+    ],
+    [
+      " http://joinedupdata.org/Surveys/short-module-education_lsms",
+      "Original search term: http://joinedupdata.org/Surveys/short-module-education_lsms"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/mdg/achieve-universal-primary-education_mdg",
+      "Original search term: http://joinedupdata.org/Indicators/mdg/achieve-universal-primary-education_mdg"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/adjusted-savings-education-expenditure--percentage-of-gni_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/adjusted-savings-education-expenditure--percentage-of-gni_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/adjusted-savings-education-expenditure-current-us-dollar_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/adjusted-savings-education-expenditure-current-us-dollar_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/all-education-staff-compensation-primary--percentage-of-total-expenditure-in-primary-public-institutions_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/all-education-staff-compensation-primary--percentage-of-total-expenditure-in-primary-public-institutions_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/all-education-staff-compensation-secondary--percentage-of-total-expenditure-in-secondary-public-institutions_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/all-education-staff-compensation-secondary--percentage-of-total-expenditure-in-secondary-public-institutions_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/all-education-staff-compensation-tertiary--percentage-of-total-expenditure-in-tertiary-public-institutions_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/all-education-staff-compensation-tertiary--percentage-of-total-expenditure-in-tertiary-public-institutions_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/all-education-staff-compensation-total--percentage-of-total-expenditure-in-public-institutions_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/all-education-staff-compensation-total--percentage-of-total-expenditure-in-public-institutions_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/sdg/build-and-upgrade-education-facilities-that-are-child-disability-and-gender-sensitive-and-safe",
+      "Original search term: http://joinedupdata.org/Indicators/sdg/build-and-upgrade-education-facilities-that-are-child-disability-and-gender-sensitive-and-safe"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/sdg/countries-reporting-inclusion-of-sustainable-development-formal-education-curricula",
+      "Original search term: http://joinedupdata.org/Indicators/sdg/countries-reporting-inclusion-of-sustainable-development-formal-education-curricula"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/current-education-expenditure-primary--percentage-of-total-expenditure-in-primary-public-institutions_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/current-education-expenditure-primary--percentage-of-total-expenditure-in-primary-public-institutions_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/current-education-expenditure-secondary--percentage-of-total-expenditure-in-secondary-public-institutions_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/current-education-expenditure-secondary--percentage-of-total-expenditure-in-secondary-public-institutions_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/current-education-expenditure-tertiary--percentage-of-total-expenditure-in-tertiary-public-institutions_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/current-education-expenditure-tertiary--percentage-of-total-expenditure-in-tertiary-public-institutions_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/current-education-expenditure-total--percentage-of-total-expenditure-in-public-institutions_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/current-education-expenditure-total--percentage-of-total-expenditure-in-public-institutions_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/education-efficiency_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/education-efficiency_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/education-inputs_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/education-inputs_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/education-outcomes_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/education-outcomes_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/education-participation_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/education-participation_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/Education_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/Education_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/sdg/eliminate-gender-disparities-in-education",
+      "Original search term: http://joinedupdata.org/Indicators/sdg/eliminate-gender-disparities-in-education"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/mdg/eliminate-gender-disparity-in-primary-and-secondary-education_mdg",
+      "Original search term: http://joinedupdata.org/Indicators/mdg/eliminate-gender-disparity-in-primary-and-secondary-education_mdg"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/sdg/ensure-equal-access-for-all-women-and-men-to-tertiary-education",
+      "Original search term: http://joinedupdata.org/Indicators/sdg/ensure-equal-access-for-all-women-and-men-to-tertiary-education"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/sdg/ensure-that-all-complete-primary-and-secondary-education",
+      "Original search term: http://joinedupdata.org/Indicators/sdg/ensure-that-all-complete-primary-and-secondary-education"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/sdg/ensure-that-all-have-access-to--early-childhood-development-care-and-pre-primary-education",
+      "Original search term: http://joinedupdata.org/Indicators/sdg/ensure-that-all-have-access-to--early-childhood-development-care-and-pre-primary-education"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/expenditure-on-primary-education--percentage-of-government-expenditure-on-education_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/expenditure-on-primary-education--percentage-of-government-expenditure-on-education_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/expenditure-on-secondary-education--percentage-of-government-expenditure-on-education_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/expenditure-on-secondary-education--percentage-of-government-expenditure-on-education_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/expenditure-on-tertiary-education--percentage-of-government-expenditure-on-education_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/expenditure-on-tertiary-education--percentage-of-government-expenditure-on-education_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/government-expenditure-on-education-total--percentage-of-gdp_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/government-expenditure-on-education-total--percentage-of-gdp_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/government-expenditure-on-education-total--percentage-of-government-expenditure_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/government-expenditure-on-education-total--percentage-of-government-expenditure_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/gross-intake-ratio-in-first-grade-of-primary-education-female--percentage-of-relevant-age-group_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/gross-intake-ratio-in-first-grade-of-primary-education-female--percentage-of-relevant-age-group_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/gross-intake-ratio-in-first-grade-of-primary-education-male--percentage-of-relevant-age-group_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/gross-intake-ratio-in-first-grade-of-primary-education-male--percentage-of-relevant-age-group_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/gross-intake-ratio-in-first-grade-of-primary-education-total--percentage-of-relevant-age-group_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/gross-intake-ratio-in-first-grade-of-primary-education-total--percentage-of-relevant-age-group_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/sdg/improve-education-awareness-raising-on-climate-change-mitigation-adaptation-impact-reduction",
+      "Original search term: http://joinedupdata.org/Indicators/sdg/improve-education-awareness-raising-on-climate-change-mitigation-adaptation-impact-reduction"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/labor-force-with-primary-education--percentage-of-total_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/labor-force-with-primary-education--percentage-of-total_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/labor-force-with-primary-education-female--percentage-of-female-labor-force_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/labor-force-with-primary-education-female--percentage-of-female-labor-force_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/labor-force-with-primary-education-male--percentage-of-male-labor-force_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/labor-force-with-primary-education-male--percentage-of-male-labor-force_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/labor-force-with-secondary-education--percentage-of-total_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/labor-force-with-secondary-education--percentage-of-total_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/labor-force-with-secondary-education-female--percentage-of-female-labor-force_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/labor-force-with-secondary-education-female--percentage-of-female-labor-force_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/labor-force-with-secondary-education-male--percentage-of-male-labor-force_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/labor-force-with-secondary-education-male--percentage-of-male-labor-force_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/labor-force-with-tertiary-education--percentage-of-total_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/labor-force-with-tertiary-education--percentage-of-total_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/labor-force-with-tertiary-education-female--percentage-of-female-labor-force_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/labor-force-with-tertiary-education-female--percentage-of-female-labor-force_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/labor-force-with-tertiary-education-male--percentage-of-male-labor-force_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/labor-force-with-tertiary-education-male--percentage-of-male-labor-force_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/mdg/net-enrolment-ratio-in-primary-education_mdg",
+      "Original search term: http://joinedupdata.org/Indicators/mdg/net-enrolment-ratio-in-primary-education_mdg"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/sdg/participation-rate-of-adults-in-education-and-training-in-the-last-12-months",
+      "Original search term: http://joinedupdata.org/Indicators/sdg/participation-rate-of-adults-in-education-and-training-in-the-last-12-months"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/sdg/percentage-of-teachers-in-education-who--received-at-least-the-minimum-organized-teacher",
+      "Original search term: http://joinedupdata.org/Indicators/sdg/percentage-of-teachers-in-education-who--received-at-least-the-minimum-organized-teacher"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/sdg/percentage-of-youth-1524-not-in-education-employment-or-training-neet",
+      "Original search term: http://joinedupdata.org/Indicators/sdg/percentage-of-youth-1524-not-in-education-employment-or-training-neet"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/primary-education-duration-years_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/primary-education-duration-years_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/primary-education-pupils--percentage-female_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/primary-education-pupils--percentage-female_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/primary-education-pupils_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/primary-education-pupils_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/primary-education-teachers--percentage-female_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/primary-education-teachers--percentage-female_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/primary-education-teachers_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/primary-education-teachers_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/sdg/quality-education",
+      "Original search term: http://joinedupdata.org/Indicators/sdg/quality-education"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/mdg/ratios-of-girls-to-boys-in-primary-secondary-and-tertiary-education_mdg",
+      "Original search term: http://joinedupdata.org/Indicators/mdg/ratios-of-girls-to-boys-in-primary-secondary-and-tertiary-education_mdg"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/secondary-education-duration-years_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/secondary-education-duration-years_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/secondary-education-general-pupils--percentage-female_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/secondary-education-general-pupils--percentage-female_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/secondary-education-general-pupils_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/secondary-education-general-pupils_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/secondary-education-pupils--percentage-female_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/secondary-education-pupils--percentage-female_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/secondary-education-pupils_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/secondary-education-pupils_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/secondary-education-teachers--percentage-female_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/secondary-education-teachers--percentage-female_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/secondary-education-teachers-female_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/secondary-education-teachers-female_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/secondary-education-teachers_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/secondary-education-teachers_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/secondary-education-vocational-pupils--percentage-female_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/secondary-education-vocational-pupils--percentage-female_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/secondary-education-vocational-pupils_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/secondary-education-vocational-pupils_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/share-of-youth-not-in-education-employment-or-training-female--percentage-of-female-youth-population_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/share-of-youth-not-in-education-employment-or-training-female--percentage-of-female-youth-population_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/share-of-youth-not-in-education-employment-or-training-male--percentage-of-male-youth-population_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/share-of-youth-not-in-education-employment-or-training-male--percentage-of-male-youth-population_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/share-of-youth-not-in-education-employment-or-training-total--percentage-of-youth-population_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/share-of-youth-not-in-education-employment-or-training-total--percentage-of-youth-population_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/sdg/substantially-reduce-the-proportion-of-youth-not-in-employment-education-or-training",
+      "Original search term: http://joinedupdata.org/Indicators/sdg/substantially-reduce-the-proportion-of-youth-not-in-employment-education-or-training"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/tertiary-education-academic-staff--percentage-female_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/tertiary-education-academic-staff--percentage-female_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/trained-teachers-in-primary-education--percentage-of-total-teachers_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/trained-teachers-in-primary-education--percentage-of-total-teachers_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/trained-teachers-in-primary-education-female--percentage-of-female-teachers_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/trained-teachers-in-primary-education-female--percentage-of-female-teachers_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/trained-teachers-in-primary-education-male--percentage-of-male-teachers_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/trained-teachers-in-primary-education-male--percentage-of-male-teachers_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/unemployment-with-primary-education--percentage-of-total-unemployment_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/unemployment-with-primary-education--percentage-of-total-unemployment_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/unemployment-with-primary-education-female--percentage-of-female-unemployment_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/unemployment-with-primary-education-female--percentage-of-female-unemployment_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/unemployment-with-primary-education-male--percentage-of-male-unemployment_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/unemployment-with-primary-education-male--percentage-of-male-unemployment_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/unemployment-with-secondary-education--percentage-of-total-unemployment_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/unemployment-with-secondary-education--percentage-of-total-unemployment_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/unemployment-with-secondary-education-female--percentage-of-female-unemployment_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/unemployment-with-secondary-education-female--percentage-of-female-unemployment_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/unemployment-with-secondary-education-male--percentage-of-male-unemployment_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/unemployment-with-secondary-education-male--percentage-of-male-unemployment_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/unemployment-with-tertiary-education--percentage-of-total-unemployment_wdi", 
+      "Original search term: http://joinedupdata.org/Indicators/wdi/unemployment-with-tertiary-education--percentage-of-total-unemployment_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/unemployment-with-tertiary-education-female--percentage-of-female-unemployment_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/unemployment-with-tertiary-education-female--percentage-of-female-unemployment_wdi"
+    ],
+    [
+      " http://joinedupdata.org/Indicators/wdi/unemployment-with-tertiary-education-male--percentage-of-male-unemployment_wdi",
+      "Original search term: http://joinedupdata.org/Indicators/wdi/unemployment-with-tertiary-education-male--percentage-of-male-unemployment_wdi"
+    ]
+  ],
+  "no": 169,
+  "no2": 0,
+  "scroll": "results",
+  "trans": []
+}

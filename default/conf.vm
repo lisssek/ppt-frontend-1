@@ -1,0 +1,114 @@
+###########################################################
+## COMMON VARIABLES AND CONFIGURATION OPTIONS
+###########################################################
+
+## define system languages
+#set($systemlang = { "de" : {}, "en" : {} })
+
+## include other files
+#parse("default/vars.vm")
+#parse("default/makros.vm")
+#parse("default/lang/en.vm")
+#parse("default/lang/de.vm")
+
+## Common settings
+#set($debug = false)
+#set($serverName = "PoolParty Linked Data Server - Taxonomies, Thesauri, Vocabularies")
+#set($serverKeywords = "taxonomy, thesaurus, controlled vocabulary, knowledge model, skos, semantic web, linked data, open data, rdf, download, trix, trig, poolparty")
+#set($serverView = "/")
+#set($serverBaseURL = "http://localhost")
+#set($serverPort = "80")
+#set($projectName = $project.get($DCTERMS_TITLE).get(0).getLabel() ) ## is the same as $projectName
+#set($projectView = "/$projectId")
+#set($contextPath = $request.contextPath)
+#set($created = $project.get($DCTERMS_DATE).get(0))
+#set($modified = $project.get($DCTERMS_MODIFIED).get(0))
+#set($dateFormat = "dd MMMM yyyy HH:mm 'CET'")
+#set($timeZone = "UTC+1")
+
+## Language configuration
+#set($availableLanguages = $project.get($SW_AVAILABLELANGUAGES))
+#if( $project.get($DCTERMS_LANGUAGE).get(0).label )
+  #set($defaultLanguage = $project.get($DCTERMS_LANGUAGE).get(0).label)
+#else
+  #set($defaultLanguage = "en")
+#end
+#set($autocompleteLanguage = $defaultLanguage)
+#set($showLanguageSelector = true)
+#if( $availableLanguages.size() <= 1 )
+  #set($showLanguageSelector = false)
+#end
+
+## Tab, bar and link configuration
+#set($showIndexBar = true)
+#set($showBreadcrumb = true)
+#set($showTabs = true)
+#set($showHtmlTab = true)
+#set($showVisualTab = true)
+#if( $projectId == "court")
+  #set($showMapTab = true)
+#else
+  #set($showMapTab = false)
+#end
+#if( $projectId == "test")
+  #set($showConceptScheme = false)
+#else
+  #set($showConceptScheme = true)
+#end
+#set($showSparqlEndpointLink = true)  ## formerly $showSparqlEndpointTab
+#set($showRdfXmlLink = true)
+#if( $showSparqlEndpointLink )
+  #set($sparqlEndpoint = $project.get($VOID_SPARQLENDPOINT).get(0).stringValue().replace('null','PoolParty'))
+#end
+
+## Search field with autocomplete configuration
+#set($showAutocomplete = true)
+#set($autocompleteNoResultsBgColor = "#FFCCCC")
+#set($autocompleteNoResultsInfoBox = "NoResultsInfoBox")
+#set($autocompleteMaxResultsDisplayed = 10)
+
+## Map tab configuraion
+#set($mapProjectLon = 10.2)
+#set($mapProjectLat = 51.5)
+#set($mapProjectZoom = 5)
+#set($mapResourceZoom = 15)
+#set($mapDefaultMarker = "default/map/img/marker-blue.png")
+
+## Other configurations
+#set($fixedProperties = [$SKOS_PREFLABEL, $VCARD_POSTALCODE, $VCARD_LOCALITY, $VCARD_STREETADDRESS, $VCARD_TEL])
+#set($listedProperties = [$SKOS_ALTLABEL, $SKOS_HIDDENLABEL, $SKOS_NOTATION, $SKOS_SCOPENOTE, $SKOS_EXAMPLE, $SKOS_DEFINITION, $SKOS_BROADER, $SKOS_NARROWER, $SKOS_RELATED, $DCTERMS_MODIFIED])
+#set($indexChars = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+
+
+
+
+
+###########################################################
+## DEBUG
+###########################################################
+
+#if($debug)
+  <div id="debug">
+    <span>Debug Console</span>
+    <pre>
+      version: $version
+      created: $created
+      projectName: $projectName
+      projectId: $projectId
+      repositoryId: $repositoryId
+      resource: $resource
+      view: $view
+      projectView: $projectView
+      defaultLanguage: $defaultLanguage
+      autocompleteLanguage: $autocompleteLanguage
+      availableLanguages: $availableLanguages
+      project: $project
+      labels: $labels
+      sparqlEndpoint: $sparqlEndpoint
+      associatedLabels: $associatedLabels
+      listedProperties: $listedProperties
+      data.entrySet: $data.entrySet()
+      namespaces: $namespaces
+    </pre>
+  </div>
+#end

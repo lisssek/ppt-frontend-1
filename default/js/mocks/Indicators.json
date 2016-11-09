@@ -1,0 +1,25 @@
+[ {
+  "uri" : "http://joinedupdata.org/Indicators/wdi",
+  "title" : "wdi",
+  "subjects" : [ "World Development Indicators (WDI)" ],
+  "descriptions" : [ "" ],
+  "authors" : [ "beata_lisowska" ],
+  "publishers" : [ "Development Initiatives" ],
+  "contributors" : [ "beata_lisowska" ]
+}, {
+  "uri" : "http://joinedupdata.org/Indicators/mdg",
+  "title" : "mdg",
+  "subjects" : [ "Millennium Development Goals (MDGs) " ],
+  "descriptions" : [ "" ],
+  "authors" : [ "beata_lisowska" ],
+  "publishers" : [ "Development Initiatives" ],
+  "contributors" : [ "beata_lisowska" ]
+}, {
+  "uri" : "http://joinedupdata.org/Indicators/sdg",
+  "title" : "sdg",
+  "subjects" : [ "Sustainable Development Goals (SDGs)" ],
+  "descriptions" : [ "" ],
+  "authors" : [ "beata_lisowska" ],
+  "publishers" : [ "Development Initiatives" ],
+  "contributors" : [ "beata_lisowska" ]
+} ]

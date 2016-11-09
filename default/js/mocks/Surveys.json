@@ -1,0 +1,25 @@
+[ {
+  "uri" : "http://joinedupdata.org/Surveys/lsms",
+  "title" : "lsms",
+  "subjects" : [ "Living Standards Measurements Study" ],
+  "descriptions" : [ "LSMS" ],
+  "authors" : [ "beata_lisowska" ],
+  "publishers" : [ "" ],
+  "contributors" : [ "beata_lisowska" ]
+}, {
+  "uri" : "http://joinedupdata.org/Surveys/mics5",
+  "title" : "mics5",
+  "subjects" : [ "mapping of Multiple Indicator Cluster Survey" ],
+  "descriptions" : [ "MICS5" ],
+  "authors" : [ "beata_lisowska" ],
+  "publishers" : [ "" ],
+  "contributors" : [ "" ]
+}, {
+  "uri" : "http://joinedupdata.org/Surveys/dhsq7",
+  "title" : "dhsq7",
+  "subjects" : [ "mapping of Demographic and Health Survey" ],
+  "descriptions" : [ "DHSQ7" ],
+  "authors" : [ "beata_lisowska" ],
+  "publishers" : [ "" ],
+  "contributors" : [ "beata_lisowska" ]
+} ]
