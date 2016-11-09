@@ -1106,12 +1106,13 @@ color: red;
 	line-height: 2
 }
 .sidebar-left{
-	background-color: #FFFFFF;
-	font-size: 14px;
-	border: 1px solid #E4E4E4;
-	border-radius: 1px;
-  width:20%;
-  padding-left: 2em;
+ background-color: #FFFFFF;
+ font-size: 14px;
+ border: 1px solid #E4E4E4;
+ border-radius: 1px;
+ width:20%;
+ padding-left: 2em;
+ max-height: 41em;
 }
 .sidebar-left p {padding-left: 0.8em;}
 .sidebar-left h4 { padding-bottom: 0.25em; padding-top: 0.25em}
