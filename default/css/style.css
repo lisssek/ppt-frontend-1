@@ -1128,7 +1128,7 @@ clear:both;
 .column-right{ float: right; width: 50%; }
 #translator form {margin-left: 20%}
 .hide-hover {padding-bottom: 1em; opacity:0}
-#translator .hide-hover {display: none}
+.flex-container .hide-hover {display: none}
 .column {clear: both; width: 100%; padding-top: 1.5em}
 .column h4 {text-align: center; padding-bottom: 1em; padding-top: 1em;}
 .simple-center {margin-top: 1em; margin-bottom: 2em}
@@ -1340,4 +1340,5 @@ input[type="text"] {
 }
 .copyrights a{color: white;}
 .conceptBtn{width: 1em;height: 1em;background-repeat: no-repeat;border: none;background-color: white;}
+.conceptBtn:focus{outline: 0}
 .show{display: block}

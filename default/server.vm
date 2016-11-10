@@ -218,14 +218,14 @@
             <p id="advanced-tip-0" class="hide-hover">
             <b>1</b> You can discover different relationships to your search term/code.
             You can choose to view all the relationships to your search term/code or a specific one.
-            We use <a href="https://www.w3.org/2004/02/skos/intro">Simple Knowledge Organisation System </a> (SKOS) to map data standards; a practical example of our mapping approach can be found
-            <b> <a href="http://juds.joinedupdata.org/discussion-papers/paper-4-household-surveys/#_Toc328733940">here</a></b>.
+            We use <a href="https://www.w3.org/2004/02/skos/intro">Simple Knowledge Organisation System </a> (SKOS) to map data standards
+            </b>.
           </p>
         </div>
     </div>
     <div class= "flex-container">
       <div class="col-flx-1 advanced-hover-1">
-        <h4 style="padding-bottom: 1em;">(2) Choose <a href="http://joinedupdata.org/#data_standards_index">data standard</a> you would like to translate from..</h4>
+        <h4 style="padding-bottom: 1em;">(2) Choose <a href="http://joinedupdata.org/#data_standards_index">data standard</a> you would like to translate from...</h4>
         <select name="start" id = "start">
           <option value="er">Any</option>
           <option value="cofog">COFOG</option>
@@ -250,7 +250,7 @@
     </div>
     <div class="flex-container">
       <div class="col-flx-0 advanced-hover-1">
-        <h4 style="padding-bottom: 1em;">(3)..choose <a href="http://joinedupdata.org/#data_standards_index">data standard</a> you would like to translate to!</h4>
+        <h4 style="padding-bottom: 1em;">(3)...choose <a href="http://joinedupdata.org/#data_standards_index">data standard</a> you would like to translate to!</h4>
         <h5></h5>
         <select name="destination" id= "destination">
           <option value="er">Any</option>

@@ -41,7 +41,7 @@ function search() {
   sideBarSearch();
   $('.search-submit').click(function(event){
     ajaxLoarder();
-    var data = getSearchData;
+    var data = getSearchData();
     httpPost(data, false); //TODO change to the httpPost
     event.preventDefault();
   })
