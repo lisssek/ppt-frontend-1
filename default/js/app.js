@@ -219,7 +219,7 @@ function results(data){
   });
   $('#trans-no b').html('Optional: translations ' + data.no2);
   data.trans.forEach(function(link){
-    $('#trans').append("<li style='font-size:1.2em'><a target='_blank' href="+link[0]+">"+link[1]+"</a></li>")
+    $('#trans').append("<li style='font-size:1.2em'><a target='_blank' href="+link+">"+link+"</a></li>")
   });
   $('#xml-download a').prop('href', data.DownloadXML);
 }
