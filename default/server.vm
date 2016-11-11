@@ -292,7 +292,7 @@
     <button class="accordion" id = "xml-download-no"><b>Download results RDF/XML</b></button>
     <div id="xml-download" class="panel" style="text-align:center; overflow: auto">
       <a href="#" style="color:black; font-size: 1.2em">
-      <img src="frontendroot?fileName=default/images/favicon.ico" alt="favicon" style="width:12px;height:12px;border:0"> RDF/XML </a>
+      <img src="/PoolParty/OpenConfigPathResourceProvider/frontendroot?fileName=default/images/favicon.ico" alt="favicon" style="width:12px;height:12px;border:0"> RDF/XML </a>
     </div>
     </div>
   </div>
