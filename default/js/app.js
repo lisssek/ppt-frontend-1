@@ -125,7 +125,7 @@ function getProject (projectHashName) {
 }
 
 function standardsIndex(container){
-  var projectsData = ['Sectors', 'Indicators', 'Surveys', 'geo-pol']
+  var projectsData = ['Sectors', 'Indicators', 'Surveys']
     .map(function (projectName){
       return new Promise(function(resolve){
         httpGet(projectName + '/schemes', function(data){

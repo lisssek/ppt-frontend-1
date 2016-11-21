@@ -1095,7 +1095,7 @@ color: red;
 	padding: 2em
 }
 .panel-tab p {
-	line-height: 2;
+	line-height: 1.8;
   padding-bottom: 2em;
 }
 .sidebar-left{
@@ -1342,3 +1342,4 @@ input[type="text"] {
 .conceptBtn{width: 1em;height: 1em;background-repeat: no-repeat;border: none;background-color: white;}
 .conceptBtn:focus{outline: 0}
 .show{display: block}
+.more:link{color: white}

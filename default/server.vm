@@ -14,7 +14,7 @@
       <p style="text-align:left">
         <a href="#home"><img src="#frontendLink('default/images/icon.png')" width="40" height="40"></a>
       </p>
-      <h4>Simple search</h4>
+      <h4>Search for...</h4>
       <div class="SearchContainer">
         <input autocomplete="off" class="yui-ac-input" id="SearchInput" type="text"/>
       </div>
@@ -25,12 +25,12 @@
       <p><a href="#Sectors" class= "tab-nav">Sectors</a></p>
       <p><a href="#geo-pol" class= "tab-nav">Supranational regions and groupings</a></p>
       <p><a href="#Surveys" class= "tab-nav">Surveys</a></p>
-      <h4>List of data standard</h4>
+      <h4>List of data standards</h4>
       <p><a href="#data_standards_index" class= "tab-nav">Alphabetical list</a></p>
       <h4>Developer access</h4>
       <p><a href="http://joinedupdata.org/PoolParty/sparql/Indicators">SPARQL</a></p>
       <p><a href="http://joinedupdata.org/PoolParty/api/">API</a></p>
-      <h4><a href="http://juds.joinedupdata.org/about/">Contact us</a></h4>
+      <h4><a href="mailto:info@joinedupdata.org">Contact us</a></h4>
       <h4><a href="http://joinedupdata.org/PoolParty/!/auth/login">Log in</a></h4>
 </div>
 <div id="wrapper">
@@ -44,20 +44,22 @@
             <a href="http://juds.joinedupdata.org/">the Joined-up Data Standards project's</a></b>
           </p>
           <p>
-            Each <a href="http://juds.joinedupdata.org/discussion-papers/">discussion paper </a> focuses on an area where there are multiple standards for an identical or similar purpose. While the standards are partially compatible with one another they also contain significant differences.
-            We use the thesaurus server to cross-map these standards and then use its linked data output to build visualisations to highlight the problems.
+          The aim of this repository is two-fold. Firstly, the mapping of data standards drives the Joined-up Data Standards project’s discussion papers. Each <a href= "http://juds.joinedupdata.org/discussion-papers/" target= "_blank">discussion paper</a> focuses on an area where there are multiple standards for an identical or similar purpose. While the standards are partially compatible with one another they also contain significant differences. We use the thesaurus server to cross-map these standards and then use its linked data output to build visualisations to highlight the problems.
           </p>
           <p>
             The data standards are linked together using Simple Knowledge Organisation System (<a href="https://www.w3.org/2004/02/skos/intro"><b>SKOS</b></a>).
             SKOS not only provides a universal ‘language’ for defining relationships between concepts (terms) in a single taxonomy (vocabulary, thesaurus or classification scheme) but also a means of systematically comparing concepts in different taxonomies.
           </p>
+          <p>
+            Secondly, these pages offer a <b><a href="http://joinedupdata.org/#translator">search or translate tool</a></b>, which queries the mappings of data standards and helps to find and retrieve the relationships between data standards and filer precise results.
+          </p>
           <p style="color: #933298">
-            <b>This thesaurus is continually expanding. We will clearly label the <a href="http://joinedupdata.org/#data_standards_index" style="color: #black"><u> list of data standards </u></a> when they become available.</b>
+            <b>This thesaurus is continually expanding. We will clearly label the <a href="http://joinedupdata.org/#data_standards_index" style="color: #933298">list of data standards</a> when they become available.</b>
           </p>
           <p>
             <b>We are actively seeking to collaborate with experts interested in (or responsible for) the standards covered by our discussion papers.
             Collaborators will have access to the JUDS thesaurus server and will be able to engage in discussions on cross-mapping issues. Separate project workspaces are also available on the thesaurus server for use by other open data standards that could benefit from the platform and its technology. If you are interested in working with us please
-            <a href="juds.joinedupdata.org/about/">contact us</a>. </b>
+            <a href="mailto:info@joinedupdata.org"  style="color: #933298">Contact us</a>. </b>
           </p>
       </div>
     </div>
@@ -197,6 +199,9 @@
           "sectors" (the list of corresponding data standards is available <b><a href="http://joinedupdata.org/#Indicators">here</a></b>),
           "supranational regions and groupings" (the list of corresponding data standards is available <b><a href="http://joinedupdata.org/#geo-pol">here</a></b>),
           and "surveys" (the list of corresponding data standards is available <b><a href=http://joinedupdata.org/#Surveys">here</a></b>).
+      </p>
+      <p style="text-align: justify;padding-bottom: 0em;">
+        Simple search lets user find all concepts that contain a search term or code. For example, if you search for a term “agriculture”, a list of concepts containing the word “agriculture” will be returned. The simple search can be carried out either within a specific project (such as “Sectors”) or across all projects.
       </p>
     </div>
     <center class="simple-center"><input value="Simple search" style="color:#FFFFFF" type="submit" class="submit search-submit"></center>
