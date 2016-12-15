@@ -1,6 +1,19 @@
 
 var base = 'http://allan_lukwago:allanlukwago@joinedupdata.org/PoolParty/api/thesaurus/';
 
+// this is a quick fix for a set of APIS that arenot working like the rest
+var apisThatArentWorking = {
+   'water-sanitation-and-flood-protection_wb' : 'http://joinedupdata.org/PoolParty/api/thesaurus/Sectors/childconcepts?parent=http://joinedupdata.org/Sectors/world_bank_sectors/water-sanitation-and-flood-protection_wb)',
+   'industry-and-trade_wb': 'http://joinedupdata.org/PoolParty/api/thesaurus/Sectors/childconcepts?parent=http://joinedupdata.org/Sectors/world_bank_sectors/industry-and-trade_wb',
+   'energy-and-mining_wb':'http://joinedupdata.org/PoolParty/api/thesaurus/Sectors/childconcepts?parent=http://joinedupdata.org/Sectors/world_bank_sectors/energy-and-mining_wb',
+   'agriculture-fishing-and-forestry_wb': 'http://joinedupdata.org/PoolParty/api/thesaurus/Sectors/childconcepts?parent=http://joinedupdata.org/Sectors/world_bank_sectors/agriculture-fishing-and-forestry_wb',
+   'geographic_regions':'http://joinedupdata.org/PoolParty/api/thesaurus/geo-pol/childconcepts?parent=http://joinedupdata.org/geo-pol/geographic_regions',
+   'economic_groupings':'http://joinedupdata.org/PoolParty/api/thesaurus/geo-pol/childconcepts?parent=http://joinedupdata.org/geo-pol/economic_groupings',
+   'security_groupings':'http://joinedupdata.org/PoolParty/api/thesaurus/geo-pol/childconcepts?parent=http://joinedupdata.org/geo-pol/security_groupings',
+   'health_groupings':'http://joinedupdata.org/PoolParty/api/thesaurus/geo-pol/childconcepts?parent=http://joinedupdata.org/geo-pol/health_groupings',
+   'other_groupings':'http://joinedupdata.org/PoolParty/api/thesaurus/geo-pol/childconcepts?parent=http://joinedupdata.org/geo-pol/other_groupings'
+};
+
 function init(){
   if (location.pathname === '/') {
     console.log('we are in our simple SPA')
@@ -109,7 +122,10 @@ function getProject (projectHashName) {
           var childId = child.prefLabel.split(" ")[0];
           $('#'+ obj.title)
           .append("<li class='child'><button class='conceptBtn collapsed'></button><a target='_blank' href='"+child.uri+"'>"+child.prefLabel+"</a><ul class='hide' id='"+childId+"'></ul></li>")
-          httpGet(baseConceptsApi + child.uri, function(grandChildren) {
+
+          var childApi = apisThatArentWorking[childId] === undefined ? apisThatArentWorking[childId] : baseConceptsApi + child.uri;
+
+          httpGet(childApi, function(grandChildren) {
             grandChildren.forEach(function(grandChild){
               $('#' + childId)
               .append("<li class='child'><a target='_blank' href='"+grandChild.uri+"'>"+grandChild.prefLabel+"</a></li>")
@@ -281,6 +297,7 @@ function prepareList(currentProject) {
       $('#'+currentProject).find('.show').removeClass('show').addClass('hide');
     })
 };
+
 
 $(document).ready(function(){
   init();
