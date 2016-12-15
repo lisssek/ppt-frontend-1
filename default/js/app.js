@@ -95,6 +95,11 @@ function themeTitle(obj){
   return obj.subjects[0].length < 2 ? obj.title : obj.subjects[0];
 }
 
+function getIdOfApiResponse (uri) {
+  var uriArr = uri.split('/');
+  return uriArr[uriArr.length - 1];
+}
+
 function getProject (projectHashName) {
   console.log('projectHashName', projectHashName);
   //hide all tabs
@@ -115,17 +120,25 @@ function getProject (projectHashName) {
         .find('.expList')
         .append("<li class='scheme'><button class='conceptBtn collapsed'></button><a target='_blank' href='"+obj.uri+"' target='_blank'>"+title+"</a><ul class='hide' id='"+obj.title+"'></ul></li>")
 
+      var id = getIdOfApiResponse(obj.uri);
+
       var baseConceptsApi = projectName +"/childconcepts?parent=";
+
+      var ChildrenApi = apisThatArentWorking[id] !== undefined ?
+            apisThatArentWorking[id] : baseConceptsApi + obj.uri;
 
       httpGet(baseConceptsApi + obj.uri, function(children){
         children.forEach(function(child){
           var childId = child.prefLabel.split(" ")[0];
+          var id = getIdOfApiResponse(obj.uri);
+          
           $('#'+ obj.title)
           .append("<li class='child'><button class='conceptBtn collapsed'></button><a target='_blank' href='"+child.uri+"'>"+child.prefLabel+"</a><ul class='hide' id='"+childId+"'></ul></li>")
 
-          var childApi = apisThatArentWorking[childId] === undefined ? apisThatArentWorking[childId] : baseConceptsApi + child.uri;
+          var grandChildrenApi = apisThatArentWorking[id] !== undefined ?
+              apisThatArentWorking[id] : baseConceptsApi + child.uri;
 
-          httpGet(childApi, function(grandChildren) {
+          httpGet( grandChildrenApi, function(grandChildren) {
             grandChildren.forEach(function(grandChild){
               $('#' + childId)
               .append("<li class='child'><a target='_blank' href='"+grandChild.uri+"'>"+grandChild.prefLabel+"</a></li>")
