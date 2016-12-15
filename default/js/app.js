@@ -127,18 +127,18 @@ function getProject (projectHashName) {
       var ChildrenApi = apisThatArentWorking[id] !== undefined ?
             apisThatArentWorking[id] : baseConceptsApi + obj.uri;
 
-      httpGet(baseConceptsApi + obj.uri, function(children){
+      httpGet(ChildrenApi, function(children){
         children.forEach(function(child){
           var childId = child.prefLabel.split(" ")[0];
           var id = getIdOfApiResponse(obj.uri);
-          
+
           $('#'+ obj.title)
           .append("<li class='child'><button class='conceptBtn collapsed'></button><a target='_blank' href='"+child.uri+"'>"+child.prefLabel+"</a><ul class='hide' id='"+childId+"'></ul></li>")
 
           var grandChildrenApi = apisThatArentWorking[id] !== undefined ?
               apisThatArentWorking[id] : baseConceptsApi + child.uri;
 
-          httpGet( grandChildrenApi, function(grandChildren) {
+          httpGet(grandChildrenApi, function(grandChildren) {
             grandChildren.forEach(function(grandChild){
               $('#' + childId)
               .append("<li class='child'><a target='_blank' href='"+grandChild.uri+"'>"+grandChild.prefLabel+"</a></li>")
