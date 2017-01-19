@@ -41,10 +41,10 @@
       <div class="panel-tab">
           <p style="color: #BA0C2F">
             <b>This thesaurus is a free online repository of mapped data standards of
-            <a href="http://juds.joinedupdata.org/">the Joined-up Data Standards project's</a></b>
+            <a href="http://juds.joinedupdata.org/">the Joined-up Data Standards project</a></b>
           </p>
           <p>
-          The aim of this repository is two-fold. Firstly, the mapping of data standards drives the Joined-up Data Standards project’s discussion papers. Each <a href= "http://juds.joinedupdata.org/discussion-papers/" target= "_blank">discussion paper</a> focuses on an area where there are multiple standards for an identical or similar purpose. While the standards are partially compatible with one another they also contain significant differences. We use the thesaurus server to cross-map these standards and then use its linked data output to build visualisations to highlight the problems.
+          The aim of this repository is two-fold. Firstly, the mapping of data standards drives the JUDS project’s discussion papers. Each <a href= "http://juds.joinedupdata.org/discussion-papers/" target= "_blank">discussion paper</a> focuses on an area where there are multiple standards for an identical or similar purpose. While the standards are partially compatible with one another they also contain significant differences. We use the thesaurus server to cross-map these standards and then use its linked data output to build visualisations to highlight the problems.
           </p>
           <p>
             The data standards are linked together using Simple Knowledge Organisation System (<a href="https://www.w3.org/2004/02/skos/intro"><b>SKOS</b></a>).
